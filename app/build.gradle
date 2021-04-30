@@ -1,0 +1,101 @@
+
+
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.vazk.calculator"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+//
+//    testOptions {
+//        unitTests.returnDefaultValues = true
+//    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    google()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.json:json:20140107'
+    testImplementation group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    testImplementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    androidTestImplementation group: 'commons-lang', name: 'commons-lang', version: '2.6'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+    androidTestImplementation 'androidx.test:rules:1.1.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+
+    implementation project(':symja_android_library-release')
+    implementation project(':MathView-release')
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.6.0'
+
+    implementation 'io.github.kobakei:ratethisapp:1.2.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.18'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.3'
+
+
+}

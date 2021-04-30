@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?> <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="18sp"
+        android:typeface="monospace"
+        tools:text="Sin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:singleLine="true"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp"
+        tools:text="Sin" />
+</LinearLayout>

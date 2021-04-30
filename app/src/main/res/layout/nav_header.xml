@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="?colorPrimary"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/img_back"
+        style="?imageButtonStyle"
+        android:background="?selectableItemBackground"
+        android:contentDescription="@string/close_drawer"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_back_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/img_setting"
+        style="?imageButtonStyle"
+        android:background="?selectableItemBackground"
+        android:contentDescription="@string/settings"
+        android:padding="8dp"
+        android:src="@drawable/ic_settings_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/img_share"
+        style="?imageButtonStyle"
+        android:background="?selectableItemBackground"
+        android:contentDescription="share"
+        android:padding="8dp"
+        android:src="@drawable/ic_share_white_24dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/img_help"
+        style="?imageButtonStyle"
+        android:background="?selectableItemBackground"
+        android:contentDescription="@string/help"
+        android:padding="8dp"
+        android:src="@drawable/ic_help_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/img_rate"
+        style="?imageButtonStyle"
+        android:background="?selectableItemBackground"
+        android:contentDescription="@string/help"
+        android:padding="8dp"
+        android:src="@drawable/ic_star_rate_white_18dp" />
+
+</LinearLayout>
+
