@@ -34,6 +34,8 @@ import androidx.core.view.GravityCompat;
 import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.SwitchCompat;
+
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -45,6 +47,8 @@ import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.vazk.calculator.R;
 import com.vazk.calculator.activities.base.AbstractCalculatorActivity;
@@ -95,8 +99,10 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
     private DrawerLayout mDrawerLayout;
     private CalculatorEditText mInputDisplay;
     private ViewGroup mDisplayForeground;
+    TextView texto;
     private MathView mCalculatorResultView;
     private FloatingActionButton mFabClose;
+    ImageButton img_history;
     private View mCurrentButton = null;
     private CalculatorState mCurrentState = CalculatorState.INPUT;
     private MathEvaluator mEvaluator;
@@ -123,6 +129,8 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
         setContentView(R.layout.activity_basic_calculator);
         bindView();
 
+        img_history = findViewById(R.id.img_history);
+        texto = findViewById(R.id.opcionesavanzadas);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mInputDisplay.setShowSoftInputOnFocus(false);
         }
@@ -150,11 +158,7 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
         mInputDisplay.insert(text);
     }
 
-    /**
-     * insert text to display
-     *
-     * @param opt - operator
-     */
+
     public void insertOperator(String opt) {
         if (mCurrentState == CalculatorState.INPUT) {
             //do something
@@ -258,12 +262,37 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
                         getString(R.string.fraction_decs))
                         .drawShadow(true)
                         .cancelable(true)
+
                         .targetCircleColor(R.color.colorAccent)
                         .transparentTarget(true)
                         .outerCircleColor(R.color.colorPrimary)
                         .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
+                TapTarget target2 = TapTarget.forView(img_history,
+                        "Cambiar despues a español",
+                        "Muestra los clculos que realizaste anteriormente en forma de historial.")
+                        .drawShadow(true)
+                        .cancelable(true)
+                        .targetCircleColor(R.color.colorAccent)
+                        .transparentTarget(true)
+                        .outerCircleColor(R.color.colorPrimary)
+                        .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
+                TapTarget target3 = TapTarget.forView(findViewById(R.id.opcionesavanzadas),
+                        "Opcines mas avanzadas",
+                       "Toca la parte inferior para mostrar opciones de calculadora mas avanzados")
+
+                        .drawShadow(true)
+                        .cancelable(true)
+                        .targetCircleColor(R.color.colorAccent)
+                        .targetCircleColor(R.color.colorAccent)
+                        .transparentTarget(true)
+                        .outerCircleColor(R.color.colorPrimary)
+                        .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
+
                 TapTargetSequence sequence = new TapTargetSequence(BasicCalculatorActivity.this);
-                sequence.targets(target)
+                sequence.targets(target,target2,target3)
                         .listener(new TapTargetSequence.Listener() {
                             @Override
                             public void onSequenceFinish() {
@@ -276,6 +305,11 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
                             }
                         }).start();
             }
+
+
+
+
+
         }, 1000);
 
     }
@@ -409,13 +443,6 @@ public class BasicCalculatorActivity extends AbstractCalculatorActivity
                 EvaluateConfig.loadFromSetting(this));
     }
 
-    /**
-     * only show animate ripple on device lollipop
-     *
-     * @param sourceView
-     * @param color
-     * @param listener
-     */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void animateRipple(final ViewGroup foreground,
                                @Nullable View sourceView,

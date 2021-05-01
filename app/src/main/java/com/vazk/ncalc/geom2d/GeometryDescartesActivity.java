@@ -39,7 +39,8 @@ import com.vazk.calculator.R;
 import com.vazk.calculator.activities.base.NavDrawerActivity;
 
 public class GeometryDescartesActivity extends NavDrawerActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, ViewPager.OnPageChangeListener {
+        implements   View.OnClickListener, ViewPager.OnPageChangeListener {
+
 
     private static final int mCount = 3;
     private ViewPager mPager;
@@ -52,15 +53,9 @@ public class GeometryDescartesActivity extends NavDrawerActivity
         setContentView(R.layout.activity_geometry_descartes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         mPager = (ViewPager) findViewById(R.id.viewpager);
         mPager.setOffscreenPageLimit(mCount);

@@ -23,44 +23,21 @@ import android.content.res.Resources;
 import com.vazk.calculator.R;
 import com.vazk.ncalc.utils.ViewUtils;
 
-/**
- * Created by Duy on 3/7/2016
- */
 public class ThemeManager {
     public static final String NULL = "";
     public static final int THEME_NOT_FOUND = -1;
-    private final int mCyanTheme;
-    private final int mBlueTheme;
-    private final int mBlueGrayTheme;
-    private final int mIndigoTheme;
-    private final int mRedTheme;
-    private final int mPinkTheme;
-    private final int mPurpleTheme;
-    private final int mDeepPurpleTheme;
-    private final int mTealTheme;
-    private final int mYellowTheme;
+
     private final int mLightTheme;
     private final int mDarkTheme;
-    private final int mBrownTheme;
-    private final int mGradientTheme;
+
     private Resources mResources;
 
     public ThemeManager(Context applicationContext) {
         this.mResources = applicationContext.getResources();
-        mCyanTheme = R.style.AppTheme_Cyan;
-        mBlueGrayTheme = R.style.AppTheme_BlueGray;
-        mBlueTheme = R.style.AppTheme_Blue;
-        mIndigoTheme = R.style.AppTheme_Indigo;
-        mRedTheme = R.style.AppTheme_Red;
-        mPinkTheme = R.style.AppTheme_Pink;
-        mPurpleTheme = R.style.AppTheme_Purple;
-        mDeepPurpleTheme = R.style.AppTheme_DeepPurple;
-        mTealTheme = R.style.AppTheme_Teal;
-        mYellowTheme = R.style.AppTheme_Yellow;
+
         mLightTheme = R.style.AppThemeLight;
         mDarkTheme = R.style.AppThemeDark;
-        mBrownTheme = R.style.AppTheme_Brown;
-        mGradientTheme = R.style.AppTheme_Gradient;
+
     }
 
     /**
@@ -76,28 +53,8 @@ public class ThemeManager {
         }
         if (name.equals(mResources.getString(R.string.theme_light))) {
             return mLightTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_cyan))) {
-            return mCyanTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_indigo))) {
-            return mIndigoTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_brown))) {
-            return mBrownTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_blue))) {
-            return mBlueTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_red))) {
-            return mRedTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_purple))) {
-            return mPurpleTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_deep_purple))) {
-            return mDeepPurpleTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_teal))) {
-            return mTealTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_yellow))) {
-            return mYellowTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_dark))) {
+        }   else if (name.equals(mResources.getString(R.string.theme_dark))) {
             return mDarkTheme;
-        } else if (name.equals(mResources.getString(R.string.theme_gradient))) {
-            return mGradientTheme;
         }
         return mLightTheme;
     }

@@ -64,86 +64,43 @@ import static com.vazk.calculator.symja.models.TrigItem.TRIG_TYPE.REDUCE;
 /**
  * Created by Duy on 19/7/2016
  */
-public abstract class NavDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public abstract class NavDrawerActivity extends BaseActivity    {
     protected final Handler handler = new Handler();
-    protected DrawerLayout mDrawerLayout;
 
-    /**
-     * call on user click back
-     */
-    @Override
-    public void onBackPressed() {
-        if (mDrawerLayout != null) {
-            if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-            } else {
-                super.onBackPressed();
-            }
-        } else
-            super.onBackPressed();
-    }
 
-    public void closeDrawer() {
-        mDrawerLayout.closeDrawers();
-    }
+
+
+
 
     @Override
     protected void onResume() {
         super.onResume();
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        setupHeaderNavigation(navigationView);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        //PARA QUE APAREZCA LA FLECHA DE ATRAS
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //regresar...
+                finish();
+            }
+        });
+
+
     }
 
-    private void setupHeaderNavigation(NavigationView navigationView) {
-        View header = navigationView.getHeaderView(0);
-        header.findViewById(R.id.img_help).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closeDrawer();
-                startActivity(new Intent(getApplicationContext(), MarkdownListDocumentActivity.class));
-            }
-        });
-        header.findViewById(R.id.img_setting).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
-            }
-        });
-        header.findViewById(R.id.img_share).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closeDrawer();
-                shareApp();
-            }
-        });
-        header.findViewById(R.id.img_rate).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closeDrawer();
-                gotoPlayStore();
-            }
-        });
-        header.findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closeDrawer();
-            }
-        });
-    }
 
-    @Override
+
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        closeDrawer();
+
         Intent intent;
         switch (id) {
             case R.id.action_all_functions: {

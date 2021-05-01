@@ -13,11 +13,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppThemeLight"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PrincipalMenu"></activity>
-        <activity
-            android:name="com.vazk.ncalc.calculator.BasicCalculatorActivity"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="stateAlwaysHidden">
+        <activity android:name=".menus.menuCalculo"></activity>
+        <activity android:name=".menus.MenuAlgebra" />
+        <activity android:name=".PrincipalMenu">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -31,6 +29,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.vazk.ncalc.calculator.BasicCalculatorActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.vazk.ncalc.unitconverter.UnitCategoryActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
@@ -116,6 +118,15 @@
         <activity
             android:name=".symja.activities.TrigActivity"
             android:launchMode="singleTask" />
+
+        <service
+            android:name=".Notificaciones"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".symja.activities.NumberActivity"
             android:launchMode="singleTask" />

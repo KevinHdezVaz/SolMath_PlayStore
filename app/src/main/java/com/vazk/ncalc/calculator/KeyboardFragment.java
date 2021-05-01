@@ -136,12 +136,6 @@ public class KeyboardFragment extends Fragment implements View.OnClickListener, 
                 mCalculatorListener.clickSolveEquation();
                 break;
 
-            case R.id.img_setting:
-                startActivity(new Intent(getContext(), SettingsActivity.class));
-                break;
-            case R.id.img_share:
-                mCalculatorListener.shareText();
-                break;
             case R.id.btn_delete:
                 mCalculatorListener.onDelete();
                 break;

@@ -13,7 +13,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height"
+            android:layout_height="?android:actionBarSize"
             app:title=" "/>
 
         <LinearLayout
@@ -31,6 +31,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/history"
                 android:padding="8dp"
+
                 app:srcCompat="@drawable/ic_history_black_24dp"/>
 
             <androidx.appcompat.widget.SwitchCompat

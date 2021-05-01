@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:background="#ffa726"
+        android:background="#127DD3"
         android:gravity="center"
-        android:text="@string/advance"
+        android:text="⬇️ Opciones más Avanzadas ⬇️"
         android:textColor="#FFF" />
 
     <LinearLayout

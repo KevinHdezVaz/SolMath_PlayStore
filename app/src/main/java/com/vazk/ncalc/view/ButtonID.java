@@ -65,11 +65,7 @@ public class ButtonID {
                 R.id.btn_power,
                 R.id.btn_sqrt,
                 R.id.btn_cbrt,
-                R.id.img_setting,
-                R.id.img_share,
-//                R.id.img_copy,
-//                R.id.img_paste,
-                R.id.img_help,
+
                 R.id.btn_arcsin,
                 R.id.btn_arccos,
                 R.id.btn_arctan,

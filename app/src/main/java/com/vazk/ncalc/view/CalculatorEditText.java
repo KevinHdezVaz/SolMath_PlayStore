@@ -33,13 +33,6 @@ import com.vazk.ncalc.utils.TextUtil;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * FormattedNumberEditText adds more advanced functionality to NumberEditText.
- * <p/>
- * Commas will appear as numbers are typed, exponents will be raised, and backspacing
- * on sin( and log( will remove the whole word. Because of the formatting, getText() will
- * no longer return the correct value. getCleanText() has been added instead.
- */
 public class CalculatorEditText extends ResizingEditText {
     public static final String TAG = "CalculatorEditText";
     public static final char CURSOR = '\u273f';

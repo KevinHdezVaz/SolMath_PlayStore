@@ -10,9 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:background="#ffa726"
+        android:background="#127DD3"
         android:gravity="center"
-        android:text="@string/advance"
+        android:id="@+id/opcionesavanzadas"
+        android:text="⬇️ Opciones más Avanzadas ⬇️"
         android:textColor="#FFF" />
 
 
@@ -25,25 +26,38 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arcsin"
+ android:background="@drawable/fondo_claro"
+
+
+
             style="?buttonAdvanceStyle"
             android:text="@string/arcsin" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arccos"
+
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/arccos" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arctan"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/arctan" />
         <!--<com.example.duy. calculator.view.Padcom.duy.calculator.view.CalcButtonBasicCalculator-->
         <!--android:id="@+id/btnTable"-->
-        <!--style="?buttonAdvanceStyle"-->
+         android:background="@drawable/fondo_claro"
+<!--
+        style="?buttonAdvanceStyle"-->
         <!--android:layout_weight="1"-->
         <!--android:text="@string/table"/>-->
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_log"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -61,25 +75,35 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_sinh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/sinh" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_cosh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/cosh" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_tanh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/tanh" />
         <!--<com.example.duy. calculator.view.Padcom.duy.calculator.view.CalcButtonBasicCalculator-->
         <!--android:id="@+id/btnTable"-->
-        <!--style="?buttonAdvanceStyle"-->
+         android:background="@drawable/fondo_claro"
+<!--
+        style="?buttonAdvanceStyle"-->
         <!--android:layout_weight="1"-->
         <!--android:text="@string/table"/>-->
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_exp"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -97,6 +121,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arcsinh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -105,6 +131,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arccosh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -113,6 +141,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_arctanh"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -121,6 +151,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_mod"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/mod" />
     </LinearLayout>
@@ -135,26 +167,36 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_ln"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/ln" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_abs"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/abs" />
 
         <com.vazk.ncalc.view.CalcButton
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:id="@+id/btn_var_e"
             android:text="@string/constant_e" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_percent"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:text="@string/percentage" />
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_sign"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -172,6 +214,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_i"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -180,6 +224,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_gcd"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -188,6 +234,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_lcm"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -196,6 +244,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_combi"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -204,6 +254,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_perm"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -223,6 +275,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_ceil"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -231,6 +285,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_floor"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -239,6 +295,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_min"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -247,6 +305,8 @@
 
         <com.vazk.ncalc.view.CalcButton
             android:id="@+id/btn_max"
+             android:background="@drawable/fondo_claro"
+
             style="?buttonAdvanceStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
