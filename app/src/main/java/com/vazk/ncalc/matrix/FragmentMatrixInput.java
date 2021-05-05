@@ -109,7 +109,9 @@ public class FragmentMatrixInput extends Fragment implements View.OnClickListene
         Button btnSubmit = (Button) findViewById(R.id.btn_submit);
         btnSubmit.setOnClickListener(this);
 
+
         createLayoutMatrix(3, 3, mContainerA);
+
         createLayoutMatrix(3, 3, mContainerB);
     }
 
@@ -138,12 +140,13 @@ public class FragmentMatrixInput extends Fragment implements View.OnClickListene
             for (int j = 0; j < col; j++) {
                 AppCompatEditText editText = new AppCompatEditText(getContext());
                 editText.setHint("[" + i + "," + j + "]");
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                         RelativeLayout.LayoutParams.WRAP_CONTENT,
                         RelativeLayout.LayoutParams.WRAP_CONTENT);
                 editText.setSingleLine(true);
-                editText.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
-                editText.setId(index);
+                editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                 editText.setId(index);
                 if (isDebug) {
                     editText.setText(String.valueOf(random.nextInt(200) - 100));
                 }

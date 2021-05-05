@@ -17,8 +17,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.navigation.NavigationView;
 import com.vazk.calculator.menus.MenuAlgebra;
+import com.vazk.calculator.menus.MenuEstadistica;
+import com.vazk.calculator.menus.MenuNumeros;
 import com.vazk.calculator.menus.menuCalculo;
 
 public class PrincipalMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -28,8 +31,8 @@ public class PrincipalMenu extends AppCompatActivity implements NavigationView.O
     NavigationView navigationView;
     Toolbar toolbar;
     CardView imagen1,imagen2,imagen3,imagen4,imagen5;
-    ImageButton btn1, btn2;
-
+    ImageButton btn1, btn2, btn3, btn4;
+    LottieAnimationView animationView,animationView2;
     @Override
     protected void onCreate(Bundle savedInstanceState)
 
@@ -45,13 +48,19 @@ public class PrincipalMenu extends AppCompatActivity implements NavigationView.O
         home2 =  nav.getMenu().findItem(R.id.nav_acerca);
         btn1 = (ImageButton) findViewById(R.id.hola);
         btn2 = (ImageButton) findViewById(R.id.hola2);
+        btn3 = (ImageButton) findViewById(R.id.hola3);
+        btn4= (ImageButton) findViewById(R.id.hola4);
+
         imagen1 = findViewById(R.id.animacion_1);
         imagen2 = findViewById(R.id.animacion_2);
         imagen3 = findViewById(R.id.animacion_3);
         imagen4 = findViewById(R.id.animacion_4);
+        animationView = findViewById(R.id.animationView);
+        animationView2 = findViewById(R.id.animationView2);
 
 
-
+        animationView.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_arriba));
+        animationView2.startAnimation(AnimationUtils.loadAnimation(this,R.anim.from_abajo));
 
 
 
@@ -88,7 +97,16 @@ public class PrincipalMenu extends AppCompatActivity implements NavigationView.O
             startActivity(intent);
         });
 
+        btn3.setOnClickListener(view -> {
+            Intent intent = new Intent(PrincipalMenu.this, MenuEstadistica.class);
+            startActivity(intent);
+        });
 
+
+        btn4.setOnClickListener(view -> {
+            Intent intent = new Intent(PrincipalMenu.this, MenuNumeros.class);
+            startActivity(intent);
+        });
 
 
     }

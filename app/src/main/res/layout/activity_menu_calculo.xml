@@ -9,7 +9,7 @@
     android:layout_height="match_parent" >
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        app:title="Menú principal"
+        app:title="@string/analytics"
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/toolbar"
@@ -50,12 +50,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_margin="10dp"
-                    android:padding="10dp"
-                    android:fontFamily="@font/quicksand_bold"
+                     android:fontFamily="@font/quicksand_bold"
                     android:textColor="@android:color/white"
 
 
-                    android:text="fdsafsdafsad"
+                    android:text="Se ocupa del estudio de la variación y del movimiento. Permite observar y describir la realidad en términos dinámicos y se emplea en diversos campos tales como la física, la ingeniería, la economía o la estadística."
                     android:layout_height="match_parent" />
             </ScrollView>
         </androidx.cardview.widget.CardView>

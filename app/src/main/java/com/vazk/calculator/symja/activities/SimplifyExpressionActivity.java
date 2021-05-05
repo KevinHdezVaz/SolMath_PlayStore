@@ -51,7 +51,7 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.simplify_expression);
+        setTitle( getString(R.string.simplify_expression));
         mBtnEvaluate.setText(R.string.simplify);
         mHint1.setHint(getString(R.string.enter_expression));
         getIntentData();
@@ -61,6 +61,10 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
             if (isDataNull) {
                 mInputFormula.setText("a - b + 2a - b");
             }
+        }
+
+        if(isFirstTime()){
+            clickHelp();
         }
     }
 
@@ -113,9 +117,7 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
         return simplifyItem.getInput();
     }
 
-    /**
-     * get data from activity start it
-     */
+
     private void getIntentData() {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(BasicCalculatorActivity.DATA);
@@ -127,6 +129,19 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
                 clickEvaluate();
             }
         }
+    }
+    private boolean isFirstTime()
+    {
+
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("hola", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("hola", true);
+            editor.commit();
+        }
+        return !ranBefore;
     }
 
     @Override

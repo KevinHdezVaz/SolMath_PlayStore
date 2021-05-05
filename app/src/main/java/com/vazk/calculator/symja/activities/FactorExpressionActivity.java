@@ -65,6 +65,10 @@ public class FactorExpressionActivity extends BaseEvaluatorActivity {
                 mInputFormula.setText("x^4 - 1");
             }
         }
+
+        if (isFirstTime()){
+            clickHelp();
+        }
     }
 
     @Override
@@ -110,9 +114,19 @@ public class FactorExpressionActivity extends BaseEvaluatorActivity {
          sequence.start();
     }
 
-    /**
-     * get data from activity start it
-     */
+    private boolean isFirstTime()
+    {
+
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("kevin", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("kevin", true);
+            editor.commit();
+        }
+        return !ranBefore;
+    }
     private void getIntentData() {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(BasicCalculatorActivity.DATA);

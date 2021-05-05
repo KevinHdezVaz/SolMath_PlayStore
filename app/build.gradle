@@ -101,6 +101,8 @@ dependencies {
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
     implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
 
+    implementation "com.airbnb.android:lottie:3.4.0"
+
     implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
     implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.18'

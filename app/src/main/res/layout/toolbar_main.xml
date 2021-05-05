@@ -23,14 +23,20 @@
             android:gravity="right|center"
             android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Historial->"
+                android:layout_height="wrap_content"
+>
 
+            </TextView>
             <ImageButton
                 android:id="@+id/img_history"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/history"
-                android:padding="8dp"
+                 android:padding="8dp"
 
                 app:srcCompat="@drawable/ic_history_black_24dp"/>
 

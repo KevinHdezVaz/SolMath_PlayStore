@@ -19,7 +19,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import java.security.Principal;
 
 public class Notificaciones extends FirebaseMessagingService {
-
+    private static final String DESCUENTO = "descuento";
     public Notificaciones() {
     }
 
@@ -35,10 +35,20 @@ public class Notificaciones extends FirebaseMessagingService {
     private void sendNotificacion(RemoteMessage remoteMessage) {
         Intent intent = new Intent(this, PrincipalMenu.class);
 
+
+        String descStr = remoteMessage.getData().get(DESCUENTO);
+        float desc = Float.valueOf(descStr != null? descStr : "0");
+
+        intent.putExtra(DESCUENTO, desc);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent, PendingIntent.FLAG_ONE_SHOT);
         NotificationManager notificationManager= (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         Uri defaultSound  = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+
+
+
+
         Notification.Builder notificacionBuilder = new Notification.Builder(this)
                 .setContentTitle(remoteMessage.getNotification().getTitle())
                 .setContentText(remoteMessage.getNotification().getBody())
@@ -47,10 +57,15 @@ public class Notificaciones extends FirebaseMessagingService {
                 .setContentIntent(pendingIntent);
 
         if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP) {
-            ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary) ;
+            notificacionBuilder.setColor(desc > .4 ?
+                    ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary) :
+                    ContextCompat.getColor(getApplicationContext(), R.color.colorGRadiente));
+
+            notificacionBuilder.setPriority(Notification.PRIORITY_MAX);
+
         }
 
-        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.O) {
+            if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.O) {
             String chanel = "channel.id.notification.normal";
             String chanelName = "Oferta normal";
             NotificationChannel channel = new NotificationChannel(chanel,chanelName, NotificationManager.IMPORTANCE_DEFAULT);

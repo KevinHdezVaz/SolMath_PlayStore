@@ -23,8 +23,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import androidx.annotation.WorkerThread;
-import com.google.android.material.navigation.NavigationView;
+
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.vazk.calculator.R;
 import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
@@ -43,10 +46,10 @@ import static com.vazk.calculator.R.string.solve;
 
 
 public class SolveEquationActivity extends BaseEvaluatorActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
-        View.OnClickListener {
+        implements View.OnClickListener {
     private static final String STARTED = SolveEquationActivity.class.getName() + "started";
-
+    public TextView texto;
+    public TextView texto2;
     protected SharedPreferences preferences;
     private boolean isDataNull = true;
 
@@ -60,13 +63,32 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
         super.onCreate(savedInstanceState);
         setTitle(R.string.solve_equation);
         mHint1.setHint(getString(R.string.input_equation));
+
         mBtnEvaluate.setText(solve);
         getIntentData();
+        texto = findViewById(R.id.texto);
+        texto2 = findViewById(R.id.texto2);
+
+
+        texto.setText("Esta calculadora de ecuaciones permite resolver una ecuación online en forma exacta con los pasos del cálculo: ecuación de primer grado, ecuación de segundo grado, ecuación de producto cero, ecuación logarítmica, ecuación diferencial.");
+        texto2.setText("Ejemplo: \n\n-5x-6=3x-8\n-x^2-x-6=0\n-x^4-5x^2+4=0");
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isStarted = preferences.getBoolean(STARTED, false);
+
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {
-            mInputFormula.setText("2x^2 + 3x + 1");
+            mInputFormula.setText("243");
+
+        }
+            mInputFormula.setText("989");
+        Toast.makeText(this, "asdfasdasd", Toast.LENGTH_SHORT).show();
+
+
+        if(isFirstTime()){
+            clickHelp();
+
+
+
         }
     }
 
@@ -111,9 +133,6 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
          sequence.start();
     }
 
-    /**
-     * get data from activity start it
-     */
     private void getIntentData() {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(BasicCalculatorActivity.DATA);
@@ -123,6 +142,8 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
                 mInputFormula.setText(data);
                 data = new ExpressionTokenizer().getNormalExpression(data);
                 isDataNull = false;
+
+
                 if (!data.isEmpty()) {
                     clickEvaluate();
                 } else {
@@ -130,6 +151,18 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
                 }
             }
         }
+    }  private boolean isFirstTime()
+    {
+
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("game", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("game", true);
+            editor.commit();
+        }
+        return !ranBefore;
     }
 
     @Override

@@ -88,7 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:engine="KaTeX"
-                        app:text="$$Calculator N+$$">
+
+                        app:text="EasyMath">
 
                     </com.vazk.ncalc.view.MathFormulaView>
                 </FrameLayout>
@@ -117,8 +118,8 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_help"
-            android:layout_width="@dimen/fab_size_normal"
-            android:layout_height="@dimen/fab_size_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_weight="1"
@@ -127,8 +128,8 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_add"
-            android:layout_width="@dimen/fab_size_normal"
-            android:layout_height="@dimen/fab_size_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_weight="1"
@@ -138,8 +139,8 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_clear"
-            android:layout_width="@dimen/fab_size_normal"
-            android:layout_height="@dimen/fab_size_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_weight="1"

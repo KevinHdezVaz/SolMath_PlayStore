@@ -31,9 +31,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vazk.calculator.R;
@@ -65,34 +67,31 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         implements View.OnClickListener, FunctionSuggestionAdapter.OnSuggestionClickListener {
     protected String TAG = BaseEvaluatorActivity.class.getName();
 
-    /*Limit, integrate, derivative*/
     protected EditText mEditLowerBound, mEditUpperBound;
     protected LinearLayout mLayoutLimit;
     protected TextInputLayout mHint1, mHint2;
     protected AppCompatSpinner mSpinner;
 
-    protected ResizingEditText mInputFormula;
+     protected ResizingEditText mInputFormula;
     protected ResizingEditText mInputFormula2;
 
     protected SharedPreferences mPreferences;
     protected ContentLoadingProgressBar mProgress;
     protected Button mBtnClear, mBtnEvaluate;
+    public TextView texto,texto2;
 
     protected RecyclerView mResultView;
     private ResultAdapter mResultAdapter;
-    private final View.OnKeyListener mFormulaOnKeyListener = new View.OnKeyListener() {
-        @Override
-        public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_NUMPAD_ENTER:
-                case KeyEvent.KEYCODE_ENTER:
-                    if (keyEvent.getAction() == KeyEvent.ACTION_UP) {
-                        clickEvaluate();
-                    }
-                    return true;
-            }
-            return false;
+    private final View.OnKeyListener mFormulaOnKeyListener = (view, keyCode, keyEvent) -> {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_NUMPAD_ENTER:
+            case KeyEvent.KEYCODE_ENTER:
+                if (keyEvent.getAction() == KeyEvent.ACTION_UP) {
+                    clickEvaluate();
+                }
+                return true;
         }
+        return false;
     };
 
     @Override
@@ -101,11 +100,10 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         setContentView(R.layout.activity_evaluator);
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         initView();
+
+
     }
 
-    /**
-     * restore input
-     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -128,7 +126,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mInputFormula = findViewById(R.id.edit_input);
         mInputFormula.setOnSuggestionClickListener(this);
 
-        mProgress = findViewById(R.id.progress_bar);
+         mProgress = findViewById(R.id.progress_bar);
         mSpinner = findViewById(R.id.spinner);
         mBtnClear = findViewById(R.id.btn_clear);
         mInputFormula2 = findViewById(R.id.edit_input_2);
@@ -145,6 +143,8 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mLayoutLimit.setVisibility(View.GONE);
         mInputFormula.setOnKeyListener(mFormulaOnKeyListener);
 
+        texto = findViewById(R.id.texto);
+        texto2 = findViewById(R.id.texto2);
         mResultView = findViewById(R.id.rc_result);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(false);
@@ -152,6 +152,11 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mResultView.setLayoutManager(linearLayoutManager);
         mResultAdapter = new ResultAdapter(this);
         mResultView.setAdapter(mResultAdapter);
+
+        texto = findViewById(R.id.texto);
+        texto2 = findViewById(R.id.texto2);
+
+
     }
 
 
@@ -163,6 +168,8 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
                 break;
             case R.id.btn_solve:
                 clickEvaluate();
+                texto.setVisibility(View.GONE);
+                texto2.setVisibility(View.GONE);
                 break;
             case R.id.fab_help:
                 clickHelp();
@@ -176,6 +183,8 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mEditLowerBound.setText("");
         mEditUpperBound.setText("");
         mInputFormula2.setText("");
+        texto.setVisibility(View.GONE);
+        texto2.setVisibility(View.GONE);
     }
 
     /**
@@ -241,6 +250,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
                 mBtnClear.setEnabled(true);
             }
         });
+
         calculateThread.execute(command, expr);
     }
 
@@ -284,5 +294,33 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
 
     @Nullable
     public abstract Command<ArrayList<String>, String> getCommand();
+
+    public void onClick1(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "1");
+    }
+
+    public void onClick2(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "2");
+    }    public void onClick3(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "3");
+    }    public void onClick4(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "4");
+    }    public void onClick5(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "5");
+    }    public void onClick6(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "6");
+    }
+    public void onClick7(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "7");
+    }
+    public void onClick8(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "8");
+    }
+    public void onClick9(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "9");
+    }
+    public void onClick0(View view) {
+        mInputFormula.setText(mInputFormula.getText() + "0");
+    }
 
 }

@@ -11,8 +11,12 @@ import android.widget.GridView;
 import com.vazk.calculator.R;
 import com.vazk.calculator.adaptadores.CustomAdapter;
 import com.vazk.calculator.adaptadores.GridView_adapter;
+import com.vazk.calculator.symja.activities.DerivativeActivity;
 import com.vazk.calculator.symja.activities.ExpandAllExpressionActivity;
 import com.vazk.calculator.symja.activities.FactorExpressionActivity;
+import com.vazk.calculator.symja.activities.IntegrateActivity;
+import com.vazk.calculator.symja.activities.LimitActivity;
+import com.vazk.calculator.symja.activities.PrimitiveActivity;
 import com.vazk.calculator.symja.activities.SimplifyExpressionActivity;
 import com.vazk.calculator.symja.activities.SolveEquationActivity;
 import com.vazk.ncalc.calculator.BasicCalculatorActivity;
@@ -53,10 +57,10 @@ public class menuCalculo extends AppCompatActivity {
         grid = (GridView)  findViewById(R.id.item);
 
         final ArrayList<GridView_adapter> listItems = new ArrayList<>();
-        listItems.add(new GridView_adapter(R.drawable.calculadora,getString(R.string.science_calculator)));
-        listItems.add(new GridView_adapter((R.drawable.calculadorr), getString(R.string.logic_calculator)));
-        listItems.add(new GridView_adapter((R.drawable.ecuacion), getString(R.string.solve_equation)));
-        listItems.add(new GridView_adapter((R.drawable.matriz), getString(R.string.matrix)));
+        listItems.add(new GridView_adapter(R.drawable.funcion,getString(R.string.derivative)));
+        listItems.add(new GridView_adapter((R.drawable.ic_primitive_black), getString(R.string.primitive)));
+        listItems.add(new GridView_adapter((R.drawable.integral), getString(R.string.integrate)));
+        listItems.add(new GridView_adapter((R.drawable.lok), getString(R.string.limit)));
 
 
 
@@ -68,17 +72,17 @@ public class menuCalculo extends AppCompatActivity {
         grid.setOnItemClickListener((adapterView, view, i, l) -> {
 
             if(i == 0 ){
-                startActivity(new Intent(menuCalculo.this, BasicCalculatorActivity.class));
+                startActivity(new Intent(menuCalculo.this, DerivativeActivity.class));
             }
             if(i == 1 ){
-                startActivity(new Intent(menuCalculo.this, LogicCalculatorActivity.class));
+                startActivity(new Intent(menuCalculo.this, PrimitiveActivity.class));
             }
             if(i == 2 ){
-                startActivity(new Intent(menuCalculo.this, SolveEquationActivity.class));
+                startActivity(new Intent(menuCalculo.this, IntegrateActivity.class));
 
             }
             if(i == 3 ){
-                startActivity(new Intent(menuCalculo.this, MatrixCalculatorActivity.class));
+                startActivity(new Intent(menuCalculo.this, LimitActivity.class));
             }
 
         });

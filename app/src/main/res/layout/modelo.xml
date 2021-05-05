@@ -14,7 +14,7 @@
         android:id="@+id/imagen3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/quinto"
+        android:src="@drawable/tres"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="26dp"

@@ -52,7 +52,7 @@
             android:id="@+id/wave_header2"
             ></com.scwang.wave.MultiWaveHeader>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="10"
@@ -62,24 +62,7 @@
             android:background="@drawable/chidoo"
 
             >
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animationView"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="200dp"
-                app:lottie_rawRes="@raw/animacio"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animationView2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="370dp"
-                app:lottie_rawRes="@raw/brain"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -103,7 +86,6 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
                         ads:cardCornerRadius="40dp"
                         android:id="@+id/animacion_1"
@@ -115,7 +97,6 @@
                         <ImageButton
 
                             android:layout_width="wrap_content"
-
                             android:layout_height="110dp"
                             android:src="@drawable/primeroo"
                             android:id="@+id/hola"
@@ -123,19 +104,6 @@
                             android:clickable="true"
                             android:foreground="?attr/selectableItemBackground"
                             ></ImageButton>
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/passion_one_bold"
-                            android:text="@string/algebra"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:typeface="normal"
-                            android:textColor="@android:color/white"
-                            android:textSize="35dp"
-                            android:layout_height="match_parent"
-></TextView>
 
                     </androidx.cardview.widget.CardView>
 
@@ -164,18 +132,6 @@
                             android:clickable="true"
                             android:foreground="?attr/selectableItemBackground"
                             ></ImageButton>
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/passion_one_bold"
-                            android:text="@string/analytics"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:typeface="normal"
-                            android:textColor="@android:color/white"
-                            android:textSize="35dp"
-                            android:layout_height="match_parent"
-                            ></TextView>
 
                     </androidx.cardview.widget.CardView>
 
@@ -203,18 +159,7 @@
                             android:clickable="true"
                             android:foreground="?attr/selectableItemBackground"
                             ></ImageButton>
-                        <TextView
 
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/passion_one_bold"
-                            android:text="@string/probability_statistics"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                             android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="32dp"
-                            android:layout_height="match_parent"
-                            ></TextView>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -237,18 +182,7 @@
                             android:clickable="true"
                             android:foreground="?attr/selectableItemBackground"
                             ></ImageButton>
-                        <TextView
 
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/passion_one_bold"
-                            android:text="@string/number_theory"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:textColor="@android:color/white"
-                            android:textSize="32dp"
-                            android:layout_height="match_parent"
-                            ></TextView>
                     </androidx.cardview.widget.CardView>
 
 
@@ -258,7 +192,7 @@
                 </LinearLayout>
 
             </ScrollView>
-        </RelativeLayout>
+        </LinearLayout>
         <com.scwang.wave.MultiWaveHeader
         android:layout_width="match_parent"
         android:layout_height="20dp"
