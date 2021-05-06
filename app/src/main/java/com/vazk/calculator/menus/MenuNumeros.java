@@ -51,12 +51,12 @@ public class MenuNumeros extends AppCompatActivity {
 
         final ArrayList<GridView_adapter> listItems = new ArrayList<>();
         listItems.add(new GridView_adapter(R.drawable.numeros,getString(R.string.factor_prime)));
-        listItems.add(new GridView_adapter((R.drawable.ic_primitive_black), getString(R.string.module)));
-        listItems.add(new GridView_adapter((R.drawable.integral), getString(R.string.catalan_number)));
-        listItems.add(new GridView_adapter((R.drawable.lok), getString(R.string.prime)));
-        listItems.add(new GridView_adapter((R.drawable.lok), getString(R.string.divisors)));
         listItems.add(new GridView_adapter((R.drawable.pii), getString(R.string.pi_number)));
-        listItems.add(new GridView_adapter((R.drawable.lok), getString(R.string.fibonacci)));
+
+
+        listItems.add(new GridView_adapter((R.drawable.lok), getString(R.string.divisors)));
+        listItems.add(new GridView_adapter((R.drawable.integral), getString(R.string.catalan_number)));
+    
 
 
 
@@ -71,35 +71,24 @@ public class MenuNumeros extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), FactorPrimeActivity.class);
                 postStartActivity(intent);
             }
-            if(i == 1 ){
-                Intent intent2 = new Intent(getApplicationContext(), ModuleActivity.class);
-                postStartActivity(intent2);
-            }
-            if(i == 2 ){
-                Intent intent3 = new Intent(getApplicationContext(), NumberActivity.class);
-                intent3.putExtra(NumberActivity.DATA, NumberActivity.NumberType.CATALAN);
-                postStartActivity(intent3);
 
+            if(i == 1 ){
+
+                Intent intent6 = new Intent(getApplicationContext(), PiActivity.class);
+                postStartActivity(intent6);
             }
-            if(i == 3 ){
-                Intent intent4 = new Intent(getApplicationContext(), NumberActivity.class);
-                intent4.putExtra(NumberActivity.DATA, NumberActivity.NumberType.PRIME);
-                postStartActivity(intent4);
-            }
-            if(i == 4 ){
+
+            if(i == 2 ){
                 Intent intent5 = new Intent(getApplicationContext(), NumberActivity.class);
                 intent5.putExtra(NumberActivity.DATA, NumberActivity.NumberType.DIVISORS);
                 postStartActivity(intent5);
 
             }
-            if(i == 5 ){
-                Intent intent6 = new Intent(getApplicationContext(), PiActivity.class);
-                postStartActivity(intent6);
+            if(i == 3 ){
+                Intent intent3 = new Intent(getApplicationContext(), NumberActivity.class);
+                intent3.putExtra(NumberActivity.DATA, NumberActivity.NumberType.CATALAN);
+                postStartActivity(intent3);
 
-            }  if(i == 6 ){
-                Intent intent7 = new Intent(getApplicationContext(), NumberActivity.class);
-                intent7.putExtra(NumberActivity.DATA, NumberActivity.NumberType.FIBONACCI);
-                postStartActivity(intent7);
 
             }
 

@@ -58,6 +58,10 @@ public class PiActivity extends BaseEvaluatorActivity {
 
         getIntentData();
 
+
+        texto.setText("El número Pi (π) se obtiene al dividir la longitud de una circunferencia por su diámetro. Además, es un número irracional. Esto quiere decir que tiene una infinita cantidad de dígitos que se prolongan tras la coma. Por lo que, jamás se repite un mismo patrón.");
+        texto2.setText("En la parte de arriba escribe los digitos que gustes para calcular la presición del número PI.");
+
         boolean isStarted = mPreferences.getBoolean(STARTED, false);
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {
             mInputFormula.setText("1000");

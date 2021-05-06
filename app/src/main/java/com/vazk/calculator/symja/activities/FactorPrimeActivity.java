@@ -19,6 +19,7 @@
 package com.vazk.calculator.symja.activities;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
@@ -49,10 +50,14 @@ public class FactorPrimeActivity extends BaseEvaluatorActivity {
 
         mBtnEvaluate.setText(R.string.factor);
         mHint1.setHint(getString(R.string.input_number));
-        mInputFormula.setInputType(InputType.TYPE_CLASS_NUMBER |
-                InputType.TYPE_NUMBER_FLAG_SIGNED);
+        mInputFormula.setTextColor(getResources().getColor(R.color.black));
 
+        mInputFormula.setEnabled(false);
         getIntentData();
+
+        texto.setText("Los factores primos de un número entero son los números primos divisores exactos de ese número entero. El proceso de búsqueda de esos divisores se denomina factorización de enteros, o factorización en números primos.");
+        texto2.setText("Ejemplo:\n-Los factores primos de 6 son 2 y 3 (6 = 2 x 3). Ambos tienen multiplicidad 1.\n" +
+                "-5 solo tiene un factor primo: él mismo (ya que 5 es primo). Tiene una multiplicidad 1.");
 
         boolean isStarted = mPreferences.getBoolean(STARTED, false);
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {

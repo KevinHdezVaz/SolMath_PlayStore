@@ -103,10 +103,10 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClickx"
+                android:onClick="onClickeq"
                 android:text="x"
                 android:textColor="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
             <Button
                 android:id="@+id/btn_y"
                 android:layout_width="wrap_content"
@@ -115,10 +115,10 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClicky"
+                android:onClick="onClickye"
                 android:text="y"
                 android:textColor="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/btn_dyt"
@@ -128,7 +128,7 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClicky"
+                android:onClick="onClickigual"
                 android:text="="
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
@@ -221,7 +221,7 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick5"
+                android:onClick="onClickarr"
                 android:text="^"
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
@@ -234,7 +234,7 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick5"
+                android:onClick="raiz"
                 android:text="√"
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
@@ -242,14 +242,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/btn_ss"
-                android:background="@drawable/fondoazul2"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick5"
-                android:text="√"
+                android:id="@+id/btn_borrar"
+                android:background="@drawable/fondoclaro3"
+                 android:clickable="true"
+                android:drawableRight="@drawable/borrar"
+
+                android:paddingRight="10dp"
+                  android:foreground="?attr/selectableItemBackground"
+                android:onClick="borrar"
+
                 android:textColor="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="10dp" />
         </LinearLayout>
 
 
@@ -311,8 +314,8 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick9"
-                android:text="9"
+                android:onClick="izquierdo"
+                android:text="("
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
 
@@ -325,8 +328,8 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick0"
-                android:text="0"
+                android:onClick="derecho"
+                android:text=")"
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
 
@@ -338,8 +341,8 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClickx"
-                android:text="x"
+                android:onClick="onClickmenos"
+                android:text="-"
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
             <Button
@@ -350,8 +353,8 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClicky"
-                android:text="y"
+                android:onClick="onClickmas"
+                android:text="+"
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
 
@@ -363,8 +366,8 @@
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClicky"
-                android:text="="
+                android:onClick="asd"
+                android:text="."
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
 

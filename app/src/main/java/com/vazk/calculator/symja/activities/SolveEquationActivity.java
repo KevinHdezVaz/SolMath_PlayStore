@@ -80,14 +80,11 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
             mInputFormula.setText("243");
 
         }
-            mInputFormula.setText("989");
-        Toast.makeText(this, "asdfasdasd", Toast.LENGTH_SHORT).show();
+
 
 
         if(isFirstTime()){
             clickHelp();
-
-
 
         }
     }

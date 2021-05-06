@@ -24,6 +24,8 @@ import android.preference.PreferenceManager;
 import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
 import com.google.android.material.textfield.TextInputLayout;
+
+import androidx.cardview.widget.CardView;
 import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -71,10 +73,10 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
     protected LinearLayout mLayoutLimit;
     protected TextInputLayout mHint1, mHint2;
     protected AppCompatSpinner mSpinner;
-
+    Button boton;
      protected ResizingEditText mInputFormula;
     protected ResizingEditText mInputFormula2;
-
+public CardView cardView;
     protected SharedPreferences mPreferences;
     protected ContentLoadingProgressBar mProgress;
     protected Button mBtnClear, mBtnEvaluate;
@@ -133,6 +135,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mHint1 = findViewById(R.id.hint_1);
         mHint2 = findViewById(R.id.hint_2);
 
+        cardView = findViewById(R.id.card_viewx);
         mBtnClear.setOnClickListener(this);
         mBtnEvaluate.setOnClickListener(this);
         mProgress.hide();
@@ -142,7 +145,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         mLayoutLimit = findViewById(R.id.layout_limit);
         mLayoutLimit.setVisibility(View.GONE);
         mInputFormula.setOnKeyListener(mFormulaOnKeyListener);
-
+        boton = findViewById(R.id.btn_borrar);
         texto = findViewById(R.id.texto);
         texto2 = findViewById(R.id.texto2);
         mResultView = findViewById(R.id.rc_result);
@@ -157,6 +160,19 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         texto2 = findViewById(R.id.texto2);
 
 
+        boton.setOnLongClickListener(view -> {
+            int length = mInputFormula.getText().length();
+            if (length > 0)
+               mInputFormula.setText("");
+
+
+            else if(length==0){
+
+                mInputFormula.setText("");
+            }
+            return false;
+        });
+
     }
 
 
@@ -168,8 +184,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
                 break;
             case R.id.btn_solve:
                 clickEvaluate();
-                texto.setVisibility(View.GONE);
-                texto2.setVisibility(View.GONE);
+                Invisiblee();
                 break;
             case R.id.fab_help:
                 clickHelp();
@@ -178,6 +193,10 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
     }
 
 
+    public void Invisiblee(){
+        texto.setVisibility(View.GONE);
+        texto2.setVisibility(View.GONE);
+    }
     public void clickClear() {
         mInputFormula.setText("");
         mEditLowerBound.setText("");
@@ -192,7 +211,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
      */
     @CallSuper
     public void clickEvaluate() {
-        //if input empty, do not evaluate
+
         if (mInputFormula.getText().toString().isEmpty()) {
             mInputFormula.requestFocus();
             mInputFormula.setError(getString(R.string.enter_expression));
@@ -295,31 +314,95 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
     @Nullable
     public abstract Command<ArrayList<String>, String> getCommand();
 
-    public void onClick1(View view) {
-        mInputFormula.setText(mInputFormula.getText() + "1");
+     public void borrar(View view){
+         Invisiblee();
+        int length = mInputFormula.getText().length();
+        if (length > 0) {
+            mInputFormula.getText().delete(length - 1, length);
+
+
+        }
+        else if(length==0){
+
+            mInputFormula.setText("");
+        }
+    }
+    public void asd(View view) {
+        Invisiblee();
+    mInputFormula.setText(mInputFormula.getText() + ".");
+    }
+    public void raiz(View view) {
+            Invisiblee();
+         mInputFormula.setText(mInputFormula.getText() + "Sqrt(");
+    }
+    public void izquierdo(View view) {
+       Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "(");
+    }
+    public void derecho(View view) {
+         Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + ")");
     }
 
+    public void onClickigual(View view) {
+    Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "=");
+    }
+    public void onClick1(View view) {
+        Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "1");
+    }
+    public void onClickmas(View view) {
+      Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "+");
+    }
+    public void onClickmenos(View view) {
+    Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "-");
+    }
+    public void onClickarr(View view) {
+      Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "^");
+    }
+    public void onClickeq(View view) {
+       Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "x");
+    }
+    public void onClickye(View view) {
+       Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "y");
+    }
     public void onClick2(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "2");
-    }    public void onClick3(View view) {
+    }
+    public void onClick3(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "3");
-    }    public void onClick4(View view) {
+    }        public void onClick4(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "4");
-    }    public void onClick5(View view) {
+    }       public void onClick5(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "5");
-    }    public void onClick6(View view) {
+    }        public void onClick6(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "6");
     }
     public void onClick7(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "7");
     }
     public void onClick8(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "8");
     }
     public void onClick9(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "9");
     }
     public void onClick0(View view) {
+        Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "0");
     }
 

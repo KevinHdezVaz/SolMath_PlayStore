@@ -1,41 +1,4 @@
-
-- [Installation](#installation)
-- [Basic calculations](#basic-calculations) 
-- [Tutorial](#tutorial)
-- [Reference of built-in symbols](#reference-of-built-in-symbols)
-
-## Installation
-
-Download the latest release from 
-* [github.com/axkr/symja_android_library/releases](https://github.com/axkr/symja_android_library/releases)
-
-unzip the download in a separate folder and modify the symja.bat file to use your Java 8 installation path to run the Symja console:
-```
-"C:\Program Files\Java\jdk1.8.0_25\bin\java" -classpath "lib/*" org.matheclipse.core.eval.Console 
-```
-
-## Basic calculations
-
-Symja can be used to calculate basic stuff:
-
-```
-1 + 2
-```
-
-To submit a command to Symja, press Shift+Return in the Web interface or Return in the console interface. The result will be printed in a new line below your query.
-
-Symja understands all basic arithmetic operators and applies the usual operator precedence. Use parentheses when needed:
-
-```
-1 - 2 * (3 + 5) / 4
-```
-
-The multiplication can be omitted:
-
-```
-1 - 2 (3 + 5) / 4
-```
-
+ 
 But function `f(x)` notation isn't interpreted as `f*(x)`
 
 ```

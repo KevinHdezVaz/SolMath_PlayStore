@@ -20,6 +20,8 @@ package com.vazk.calculator.symja.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
@@ -57,18 +59,20 @@ public class NumberActivity extends BaseEvaluatorActivity {
             type = intent.getIntExtra(DATA, NumberType.CATALAN);
         }
         setup();
+        mInputFormula.setTextColor(getResources().getColor(R.color.black));
+
+        mInputFormula.setEnabled(false);
     }
 
-    /**
-     * set up interface
-     * - label of btnSolve
-     * - hint of mInputFormula
-     */
     private void setup() {
         mBtnEvaluate.setText(R.string.eval);
         switch (type) {
             case NumberType.CATALAN:
                 mHint1.setHint(getString(R.string.catalan_desc));
+                texto.setText("Los números de Catalan forman una secuencia de números naturales que aparece en varios problemas de conteo que habitualmente son recursivos. Obtienen su nombre del matemático belga Eugène Charles Catalan.");
+                cardView.setEnabled(false);
+                cardView.setActivated(false);
+                cardView.setFocusable(false);
                 setTitle(R.string.catalan_number);
                 break;
             case NumberType.FIBONACCI:
@@ -81,6 +85,15 @@ public class NumberActivity extends BaseEvaluatorActivity {
                 break;
             case NumberType.DIVISORS:
                 mHint1.setHint(getString(R.string.divisors));
+
+
+                texto.setText("Los divisores de un número natural son los números naturales que lo pueden dividir, resultando de cociente otro número natural y de resto 0.");
+                texto2.setText("Un número es divisor de otro cuando lo divide exactamente.\n" +
+                        "\n" +
+                        "3 es divisor de 15;          15 : 3 = 5.\n"  +
+
+                        "A los divisores también se les llama factores.");
+
                 setTitle(R.string.divisors);
             default:
                 mHint1.setHint(getString(R.string.enter_number));
