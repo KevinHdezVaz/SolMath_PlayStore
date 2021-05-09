@@ -69,6 +69,7 @@ public abstract class BaseEvaluatorActivity extends NavDrawerActivity
         implements View.OnClickListener, FunctionSuggestionAdapter.OnSuggestionClickListener {
     protected String TAG = BaseEvaluatorActivity.class.getName();
 
+    public LinearLayout linearLayout;
     protected EditText mEditLowerBound, mEditUpperBound;
     protected LinearLayout mLayoutLimit;
     protected TextInputLayout mHint1, mHint2;
@@ -127,7 +128,7 @@ public CardView cardView;
         mBtnEvaluate = findViewById(R.id.btn_solve);
         mInputFormula = findViewById(R.id.edit_input);
         mInputFormula.setOnSuggestionClickListener(this);
-
+        linearLayout = findViewById(R.id.lineaCombinacion);
          mProgress = findViewById(R.id.progress_bar);
         mSpinner = findViewById(R.id.spinner);
         mBtnClear = findViewById(R.id.btn_clear);
@@ -355,6 +356,11 @@ public CardView cardView;
     public void onClickmas(View view) {
       Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "+");
+    }
+
+    public void onClickxd(View view) {
+        Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "/");
     }
     public void onClickmenos(View view) {
     Invisiblee();

@@ -18,12 +18,21 @@
 
 package com.vazk.calculator.symja.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import android.text.InputType;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 import com.vazk.calculator.R;
 
 import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
@@ -35,6 +44,8 @@ import com.gx.common.collect.Lists;
 
 import java.util.ArrayList;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 /**
  * Created by Duy on 06-Jan-17.
  */
@@ -42,6 +53,10 @@ import java.util.ArrayList;
 public class FactorPrimeActivity extends BaseEvaluatorActivity {
     private static final String STARTED = FactorPrimeActivity.class.getName() + "started";
     private boolean isDataNull = true;
+    Dialog epicDialog,epicDialog2;
+    ImageView Animacion2;
+    Button salir,seguir;
+    PhotoViewAttacher photo,poto2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,12 +67,14 @@ public class FactorPrimeActivity extends BaseEvaluatorActivity {
         mHint1.setHint(getString(R.string.input_number));
         mInputFormula.setTextColor(getResources().getColor(R.color.black));
 
-        mInputFormula.setEnabled(false);
+
+
         getIntentData();
 
         texto.setText("Los factores primos de un número entero son los números primos divisores exactos de ese número entero. El proceso de búsqueda de esos divisores se denomina factorización de enteros, o factorización en números primos.");
         texto2.setText("Ejemplo:\n-Los factores primos de 6 son 2 y 3 (6 = 2 x 3). Ambos tienen multiplicidad 1.\n" +
                 "-5 solo tiene un factor primo: él mismo (ya que 5 es primo). Tiene una multiplicidad 1.");
+
 
         boolean isStarted = mPreferences.getBoolean(STARTED, false);
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {
@@ -68,12 +85,33 @@ public class FactorPrimeActivity extends BaseEvaluatorActivity {
 
     @Override
     public void clickHelp() {
+        mostrarSalir();
+    }
+    public void mostrarSalir() {
+        epicDialog2 = new Dialog(this);
+        epicDialog2.setContentView(R.layout.about);
+
+        Animacion2 = epicDialog2.findViewById(R.id.Animacion2);
+
+        photo = new PhotoViewAttacher(Animacion2);
+        seguir = (Button) epicDialog2.findViewById(R.id.botonvamo);
+
+
+
+        seguir.setOnClickListener(view -> {
+
+               epicDialog2.dismiss();
+
+
+        });
+
+        epicDialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        epicDialog2.show();
+
 
     }
 
-    /**
-     * get data from activity start it
-     */
     private void getIntentData() {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(BasicCalculatorActivity.DATA);

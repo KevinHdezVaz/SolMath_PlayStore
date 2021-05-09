@@ -21,6 +21,7 @@ package com.vazk.calculator.symja.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
@@ -138,13 +139,13 @@ public class NumberActivity extends BaseEvaluatorActivity {
                 function = (NumberType.PRIME_FUNCTION);
                 break;
             case NumberType.DIVISORS:
-                function = (NumberType.DIVISORS_FUNCTION);
+                Toast.makeText(this, "Ingresa el número al cual quieres conocer sus divisores.", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 function = "";
                 break;
         }
-        MarkdownDocumentActivity.open(this, new FunctionDocumentItem("doc/functions/" + function, function, ""));
+
     }
 
     @Override
