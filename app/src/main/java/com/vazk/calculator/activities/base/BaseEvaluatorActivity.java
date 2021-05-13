@@ -18,6 +18,10 @@
 
 package com.vazk.calculator.activities.base;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -25,6 +29,7 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
 import com.google.android.material.textfield.TextInputLayout;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
 import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.appcompat.widget.AppCompatSpinner;
@@ -40,7 +45,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.vazk.calculator.R;
+import com.mrntlu.toastie.Toastie;
+ import com.vazk.calculator.R;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.exceptions.ExpressionChecker;
 import com.vazk.calculator.evaluator.exceptions.ParsingException;
@@ -48,6 +54,7 @@ import com.vazk.calculator.evaluator.thread.BaseThread;
 import com.vazk.calculator.evaluator.thread.CalculateThread;
 import com.vazk.calculator.evaluator.thread.Command;
 import com.vazk.calculator.history.ResultEntry;
+import com.vazk.calculator.menus.prueba;
 import com.vazk.calculator.symja.activities.ResultAdapter;
 import com.vazk.ncalc.document.FunctionSuggestionAdapter;
 import com.vazk.ncalc.document.MarkdownDocumentActivity;
@@ -82,6 +89,7 @@ public CardView cardView;
     protected ContentLoadingProgressBar mProgress;
     protected Button mBtnClear, mBtnEvaluate;
     public TextView texto,texto2;
+    public AppCompatButton botonpasos;
 
     protected RecyclerView mResultView;
     private ResultAdapter mResultAdapter;
@@ -135,7 +143,7 @@ public CardView cardView;
         mInputFormula2 = findViewById(R.id.edit_input_2);
         mHint1 = findViewById(R.id.hint_1);
         mHint2 = findViewById(R.id.hint_2);
-
+        botonpasos = findViewById(R.id.btn_pasos);
         cardView = findViewById(R.id.card_viewx);
         mBtnClear.setOnClickListener(this);
         mBtnEvaluate.setOnClickListener(this);
@@ -160,7 +168,21 @@ public CardView cardView;
         texto = findViewById(R.id.texto);
         texto2 = findViewById(R.id.texto2);
 
+        botonpasos.setEnabled(false);
 
+
+        botonpasos.setOnClickListener(view -> {
+
+             String text = mInputFormula.getText().toString();
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("text",  text);
+            clipboard.setPrimaryClip(clip);
+
+
+            Toast.makeText(this, "Ecuación copiada al portapapeles", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(BaseEvaluatorActivity.this, prueba.class));
+
+        });
         boton.setOnLongClickListener(view -> {
             int length = mInputFormula.getText().length();
             if (length > 0)
@@ -175,7 +197,6 @@ public CardView cardView;
         });
 
     }
-
 
     @Override
     public void onClick(View v) {
@@ -197,26 +218,34 @@ public CardView cardView;
     public void Invisiblee(){
         texto.setVisibility(View.GONE);
         texto2.setVisibility(View.GONE);
+
     }
     public void clickClear() {
         mInputFormula.setText("");
         mEditLowerBound.setText("");
+        botonpasos.setEnabled(false);
+
         mEditUpperBound.setText("");
         mInputFormula2.setText("");
         texto.setVisibility(View.GONE);
         texto2.setVisibility(View.GONE);
     }
 
-    /**
-     * Evaluate expression
-     */
+
     @CallSuper
     public void clickEvaluate() {
 
         if (mInputFormula.getText().toString().isEmpty()) {
             mInputFormula.requestFocus();
             mInputFormula.setError(getString(R.string.enter_expression));
+                botonpasos.setEnabled(false);
+
             return;
+        }
+
+        else{
+            botonpasos.setEnabled(true);
+
         }
 
         try {
@@ -251,7 +280,7 @@ public CardView cardView;
                 mBtnEvaluate.setEnabled(true);
                 mBtnClear.setEnabled(true);
 
-                for (String entry : result) {
+                  for (String entry : result) {
                     mResultAdapter.addItem(new ResultEntry("", entry));
                 }
 
@@ -273,6 +302,8 @@ public CardView cardView;
 
         calculateThread.execute(command, expr);
     }
+
+
 
     protected void handleExceptions(EditText editText, Exception e) {
         if (e instanceof SyntaxError) {
@@ -361,6 +392,10 @@ public CardView cardView;
     public void onClickxd(View view) {
         Invisiblee();
         mInputFormula.setText(mInputFormula.getText() + "/");
+    }
+    public void onClickZ(View view) {
+        Invisiblee();
+        mInputFormula.setText(mInputFormula.getText() + "z");
     }
     public void onClickmenos(View view) {
     Invisiblee();

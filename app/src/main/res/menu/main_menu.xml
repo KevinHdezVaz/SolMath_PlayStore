@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="acerca">
+    <item android:title="Acerca">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_acerca"
-
-                    android:title="agregar despues" />
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="Información" />
 
             </group>
         </menu>
     </item>
 
+    <item android:title="Calificar app">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_calificar"
+                    android:icon="@drawable/ic_star_rate_black_18dp"
+                    android:title="Calificar" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Compartir App">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_share_white_24dp"
+                    android:title="Compartir" />
+            </group>
+        </menu>
+    </item>
+
+
+
+
+    <item android:title="Apps del desarrollador">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+
+                    android:title="Mathquizz - Aprende mientras juegas" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Encuesta">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/encuesta"
+                    android:icon="@drawable/ic_baseline_sticky_note_2_24"
+                    android:title="Ayudanos a mejorar la app con tus opiniones."
+
+                    />
+            </group>
+        </menu>
+    </item>
 
 </menu>

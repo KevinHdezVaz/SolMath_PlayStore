@@ -47,6 +47,7 @@ public class MenuEstadistica extends AppCompatActivity {
         final ArrayList<GridView_adapter> listItems = new ArrayList<>();
         listItems.add(new GridView_adapter(R.drawable.ceta,getString(R.string.combination)));
         listItems.add(new GridView_adapter((R.drawable.pags), getString(R.string.permutation)));
+        listItems.add(new GridView_adapter((R.drawable.pags), getString(R.string.permutation)));
 
 
 
@@ -68,7 +69,10 @@ public class MenuEstadistica extends AppCompatActivity {
                 intent.putExtra(PermutationActivity.TYPE_NUMBER, PermutationActivity.TYPE_PERMUTATION);
                 postStartActivity(intent);
             }
+            if(i == 2 ){
+                startActivity(new Intent(MenuEstadistica.this,prueba.class));
 
+            }
 
         });
 

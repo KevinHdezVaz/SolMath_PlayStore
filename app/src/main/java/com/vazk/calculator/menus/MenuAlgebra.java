@@ -59,8 +59,7 @@ public class MenuAlgebra extends AppCompatActivity {
         listItems.add(new GridView_adapter((R.drawable.calculadorr), getString(R.string.logic_calculator)));
         listItems.add(new GridView_adapter((R.drawable.ecuacion), getString(R.string.solve_equation)));
         listItems.add(new GridView_adapter((R.drawable.matriz), getString(R.string.matrix)));
-        listItems.add(new GridView_adapter((R.drawable.grafico), getString(R.string.title_activity_graph)));
-        listItems.add(new GridView_adapter((R.drawable.geometria), getString(R.string.nav_descartes)));
+         listItems.add(new GridView_adapter((R.drawable.geometria), getString(R.string.nav_descartes)));
         listItems.add(new GridView_adapter((R.drawable.reducir), getString(R.string.simplify_expression)));
         listItems.add(new GridView_adapter((R.drawable.pizarron), getString(R.string.factor_polynomial)));
         listItems.add(new GridView_adapter((R.drawable.calculador), getString(R.string.all_unit_converter)));
@@ -82,7 +81,8 @@ public class MenuAlgebra extends AppCompatActivity {
                startActivity(new Intent(MenuAlgebra.this, LogicCalculatorActivity.class));
             }
            if(i == 2 ){
-               startActivity(new Intent(MenuAlgebra.this, SolveEquationActivity.class));
+              startActivity(new Intent(MenuAlgebra.this, SolveEquationActivity.class));
+          // startActivity(new Intent(MenuAlgebra.this, prueba.class));
 
             }
 
@@ -91,26 +91,24 @@ public class MenuAlgebra extends AppCompatActivity {
            if(i == 3 ){
                startActivity(new Intent(MenuAlgebra.this, MatrixCalculatorActivity.class));
             }
+
            if(i == 4 ){
-               startActivity(new Intent(MenuAlgebra.this, GraphActivity.class));
-           }
-           if(i == 5 ){
                startActivity(new Intent(MenuAlgebra.this, GeometryDescartesActivity.class));
            }
 
-           if(i == 6){
+           if(i == 5){
                startActivity(new Intent(MenuAlgebra.this, SimplifyExpressionActivity.class));
            }
-           if(i == 7){
+           if(i == 6){
                startActivity(new Intent(MenuAlgebra.this, FactorExpressionActivity.class));
            }
-           if(i == 8){
+           if(i == 7){
                startActivity(new Intent(MenuAlgebra.this, UnitCategoryActivity.class));
            }
-           if(i == 9){
+           if(i == 8){
                startActivity(new Intent(MenuAlgebra.this, ExpandAllExpressionActivity.class));
            }
-           if(i == 10){
+           if(i == 9){
                startActivity(new Intent(MenuAlgebra.this, SystemEquationActivity.class));
            }
        });

@@ -55,12 +55,27 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
         mBtnEvaluate.setText(R.string.simplify);
         mHint1.setHint(getString(R.string.enter_expression));
         getIntentData();
+
+        mInputFormula.setText("a - b + 2a - b");
+
+        texto.setText("Algunas expresiones poseen dos termines o más que tienen un mismo literal (x) y dos constantes.\n" +
+                "Por tanto, es posible poder abreviar o “reducir” las expresiones de manera que se pueda trabajar mas ágilmente con ellas.");
+        texto2.setText("Por ejemplo: " +
+                "Reducir la expresión 6x + 7 - 2x -5\n" +
+                "*Se tiene\n" +
+                "       6x + 7 -2x - 5\n" +
+                "*Luego asociamos\n" +
+                "       (6x - 2x) + (7 - 5)\n" +
+                "*Finalmente, sumando o restando términos semejantes, se obtiene:\n" +
+                "       4x+2");
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
         boolean isStarted = preferences.getBoolean(STARTED, false);
-        if (!isStarted || DLog.UI_TESTING_MODE) {
-            if (isDataNull) {
+        if (!isStarted  ) {
+
                 mInputFormula.setText("a - b + 2a - b");
-            }
+
         }
 
         if(isFirstTime()){

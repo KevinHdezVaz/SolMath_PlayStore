@@ -94,6 +94,8 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
         btnClear.setOnClickListener(this);
 
         editVar = (EditText) findViewById(R.id.edit_variable);
+
+
         initSpinOperator();
         findViewById(R.id.btn_help).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +127,7 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
 
             }
         });
+
     }
 
     @Override
@@ -163,6 +166,7 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
                 if (s.isEmpty()) s = "0";
                 index++;
                 res[i][j] = s;
+
             }
         }
         return res;
@@ -242,13 +246,17 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
                 .dimColor(R.color.colorPrimaryDark)
                 .targetRadius(70);
 
-        TapTarget target3 = TapTarget.forView(editVar, getString(R.string.enter_variable));
-        target3.drawShadow(true)
+        TapTarget target3 = TapTarget.forView(btnClear,
+                "Borra la matriz",
+                "Para borrar los elementos solamente pulsa este boton.")
+                .drawShadow(true)
                 .cancelable(true)
                 .targetCircleColor(R.color.colorAccent)
                 .transparentTarget(true)
                 .outerCircleColor(R.color.colorPrimary)
-                .dimColor(R.color.colorPrimaryDark);
+                .dimColor(R.color.colorPrimaryDark)
+                .targetRadius(70);
+
 
         TapTarget target4 = TapTarget.forView(btnSolve, getString(R.string.solve_system_equation));
         target4.drawShadow(true)
@@ -330,7 +338,8 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
             editText.setHint("[" + (i + 1) + "," + (j + 1) + "]");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(130, RelativeLayout.LayoutParams.WRAP_CONTENT);
             editText.setSingleLine(true);
-            editText.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+
+
             editText.setId(values[2]);
             if (isDebug) {
                 editText.setText(String.valueOf(random.nextInt(200) - 100));
@@ -347,6 +356,9 @@ public class DefineSystemEquationFragment extends Fragment implements View.OnCli
 
             editText.setLayoutParams(params);
             mViewGroup.addView(editText);
+            editText.setInputType(InputType.TYPE_CLASS_NUMBER |
+                    InputType.TYPE_NUMBER_FLAG_SIGNED);
+
         }
 
         @Override

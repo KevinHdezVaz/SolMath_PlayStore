@@ -28,6 +28,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.appcompat.widget.Toolbar;
+
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.vazk.calculator.R;

@@ -22,6 +22,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.vazk.calculator.R;
 import com.vazk.calculator.evaluator.base.LogicEvaluator;
@@ -299,11 +300,13 @@ public class MathEvaluator extends LogicEvaluator {
 
         if (!roots.isFree(F.Solve)) {
             return context.getString(R.string.not_find_root);
+
         } else if (!roots.isListOfLists()) {
             return context.getString(R.string.no_root);
         }
+
         return LaTexFactory.toLaTeX(roots);
-    }
+     }
 
 
     public void define(String var, double value) {

@@ -104,6 +104,7 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.4.0"
 
     implementation 'com.commit451:PhotoView:1.2.4'
+    implementation 'com.github.MrNtlu:Toastie:1.1.0'
 
     implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'

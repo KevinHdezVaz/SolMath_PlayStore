@@ -128,10 +128,10 @@ android:id="@+id/padre"
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClickigual"
-                android:text="="
+                android:onClick="onClickZ"
+                android:text="z"
                 android:textColor="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
         </LinearLayout>
         <LinearLayout
@@ -288,8 +288,8 @@ android:id="@+id/padre"
                 android:background="@drawable/fondoazul2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onClick7"
-                android:text="7"
+                android:onClick="onClickigual"
+                android:text="="
                 android:textColor="@android:color/white"
                 android:textSize="25dp" />
 

@@ -27,6 +27,8 @@ import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -73,7 +75,7 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
                 return;
             }
             mContainer.removeViewAt(mCountView - 1);
-            mMathView.setText("$$Calculator N+$$");
+            mMathView.setText("$$Easy Math$$");
             mCountView--;
             notifyParams();
         }
@@ -114,7 +116,7 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
         mCountView++;
         editText.setId(mCountView);
         mContainer.addView(editText);
-        editText.requestFocus();
+
         editText.setText(text);
 
         final TranslateAnimation animation = new TranslateAnimation(editText.getWidth(), 0f, 0f, 0f);
@@ -172,6 +174,7 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
 
         mContainer = (LinearLayout) findViewById(R.id.container);
         mMathView = (MathView) findViewById(R.id.math_view);
+
         //disable horizontal scroll when use vertical scroll.
         mMathView.setOnTouchListener(new ListView.OnTouchListener() {
             @Override
@@ -239,13 +242,6 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark);
 
-        TapTarget target3 = TapTarget.forView(editParams, getString(R.string.enter_params));
-        target3.drawShadow(true)
-                .cancelable(true)
-                .targetCircleColor(R.color.colorAccent)
-                .transparentTarget(true)
-                .outerCircleColor(R.color.colorPrimary)
-                .dimColor(R.color.colorPrimaryDark);
         TapTarget target4 = TapTarget.forView(btnSolve, getString(R.string.solve_system_equation));
         target4.drawShadow(true)
                 .cancelable(true)
@@ -255,7 +251,7 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
                 .dimColor(R.color.colorPrimaryDark);
 
         TapTargetSequence sequence = new TapTargetSequence(getActivity());
-        sequence.targets(target, target2, target3, target4);
+        sequence.targets(target, target2,  target4);
         sequence.listener(new TapTargetSequence.Listener() {
             @Override
             public void onSequenceFinish() {
@@ -319,6 +315,7 @@ public class UndefineSystemEquationFragment extends Fragment implements View.OnC
         for (int i = 0; i < mContainer.getChildCount(); i++) {
             ResizingEditText editText = (ResizingEditText) mContainer.getChildAt(i);
             String exp = editText.getCleanText();
+
             exp = new ExpressionTokenizer().getNormalExpression(exp);
             exp = replaceEqualSymbol(exp);
             if (!exp.isEmpty()) arrayList.add(exp);

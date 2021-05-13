@@ -154,7 +154,7 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
         boolean ranBefore = preferences.getBoolean("game", false);
         if (!ranBefore) {
-            // first time
+
             SharedPreferences.Editor editor = preferences.edit();
             editor.putBoolean("game", true);
             editor.commit();
@@ -181,6 +181,7 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
 
                 String decimal = MathEvaluator.getInstance().solveEquation(input,
                         config.setEvalMode(EvaluateConfig.DECIMAL),  SolveEquationActivity.this);
+
 
                 ArrayList<String> result = new ArrayList<>();
                 result.add(fraction);

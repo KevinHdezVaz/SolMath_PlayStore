@@ -58,6 +58,12 @@ public class FactorExpressionActivity extends BaseEvaluatorActivity {
         mHint1.setHint(getString(R.string.enter_expression));
         getIntentData();
 
+
+        texto.setText("El proceso de factorización es esencial para la simplificación de muchas expresiones algebraicas y es una herramienta útil para resolver ecuaciones de grado superior. De hecho, el proceso de factorización es tan importante que muy poco de álgebra más allá de este punto se puede lograr sin comprenderlo.");
+        texto2.setText("Ejemplo: \n\n" +
+                "x^2+5x+4" +
+                "\n*Resultado:\n(x+1)(x+4) ");
+
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isStarted = preferences.getBoolean(STARTED, false);
         if (!isStarted || DLog.UI_TESTING_MODE) {

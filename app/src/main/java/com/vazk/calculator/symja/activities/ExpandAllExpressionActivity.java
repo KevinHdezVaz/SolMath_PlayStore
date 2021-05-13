@@ -22,6 +22,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import com.vazk.calculator.R;
@@ -56,16 +58,21 @@ public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
         mBtnEvaluate.setText(R.string.expand);
         getIntentData();
 
+        texto.setText("El binomio de Newton es la fórmula que nos permite hallar las potencias de un binomio.\n"
+                );
+
+        texto2.setText("El teorema binomial o binomio de Newton especifica la expansión de cualquier potencia de un binomio, es decir, la expansión de  (a+b)^m");
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isStarted = preferences.getBoolean(STARTED, false);
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {
             mInputFormula.setText("(x + 2a)^8");
         }
+
     }
 
     @Override
     public void clickHelp() {
-        //if is not start
+ 
         final SharedPreferences.Editor editor = preferences.edit();
         TapTarget target0 = TapTarget.forView(mInputFormula,
                 getString(R.string.enter_expression),
