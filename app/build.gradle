@@ -1,6 +1,6 @@
-apply plugin: 'com.google.gms.google-services'
+
 apply plugin: 'com.android.application'
-android {
+ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
@@ -113,3 +113,4 @@ dependencies {
 
 
 }
+apply plugin: 'com.google.gms.google-services'

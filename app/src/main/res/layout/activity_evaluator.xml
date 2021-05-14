@@ -17,11 +17,6 @@
 
 
 
-    <include
-        layout="@layout/numeros"
-        android:layout_width="match_parent"
-        android:id="@+id/hika3"
-        android:layout_height="match_parent" />
 
 
 </RelativeLayout>

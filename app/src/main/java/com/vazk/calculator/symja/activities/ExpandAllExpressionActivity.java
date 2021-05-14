@@ -22,7 +22,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
@@ -48,6 +50,7 @@ public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
     SharedPreferences preferences;
     private boolean isDataNull = true;
 
+    Button boton,boton2,boton3,boton4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +70,36 @@ public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
         if ((!isStarted || DLog.UI_TESTING_MODE) && isDataNull) {
             mInputFormula.setText("(x + 2a)^8");
         }
+        if(isFirstTime()){
+            clickHelp();
+        }
+        boton2 = findViewById(R.id.btn11);
 
+        boton3 = findViewById(R.id.btn12);
+        boton4 = findViewById(R.id.btn13);
+        boton3.setText(Html.fromHtml("(x-y)<sup>4</sup>"));
+        boton2.setText(Html.fromHtml("(x+y)<sup>2</sup>"));
+
+        boton4.setVisibility(View.INVISIBLE);
+        mInputFormula.setTextColor(getResources().getColor(R.color.black));
+
+        mInputFormula.setEnabled(false);
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mInputFormula.setText("(x+y)^2");
+
+
+            }
+        });
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mInputFormula.setText("(x-y)^4");
+
+
+            }
+        });
     }
 
     @Override
@@ -93,8 +125,18 @@ public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
                 .transparentTarget(true)
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
+        TapTarget target1 = TapTarget.forView(botonpasos,
+                "Mostrar Pasos",
+                "Despues de escribir la ecuación puedes ver los pasos de la misma." )
+                .drawShadow(true)
+                .cancelable(true)
+                .targetCircleColor(R.color.colorAccent)
+                .transparentTarget(true)
+                .outerCircleColor(R.color.colorPrimary)
+                .dimColor(R.color.colorPrimaryDark).targetRadius(70);
         TapTargetSequence sequence = new TapTargetSequence(ExpandAllExpressionActivity.this);
-        sequence.targets(target0, target);
+        sequence.targets(target0, target,target1);
         sequence.listener(new TapTargetSequence.Listener() {
             @Override
             public void onSequenceFinish() {
@@ -137,7 +179,20 @@ public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
                 return result;
             }
         };
+    }  private boolean isFirstTime()
+    {
+
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("shibu", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("shibu", true);
+            editor.commit();
+        }
+        return !ranBefore;
     }
+
 
     /**
      * get data from another (eg. clipboard)

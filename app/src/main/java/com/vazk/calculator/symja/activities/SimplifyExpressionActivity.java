@@ -108,8 +108,19 @@ public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
                 .transparentTarget(true)
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
+        TapTarget target1 = TapTarget.forView(botonpasos,
+                "Mostrar Pasos",
+                "Despues de escribir la ecuación puedes ver los pasos de la misma." )
+                .drawShadow(true)
+                .cancelable(true)
+                .targetCircleColor(R.color.colorAccent)
+                .transparentTarget(true)
+                .outerCircleColor(R.color.colorPrimary)
+                .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
         TapTargetSequence sequence = new TapTargetSequence(SimplifyExpressionActivity.this);
-        sequence.targets(target0, target);
+        sequence.targets(target0, target1,target);
         sequence.listener(new TapTargetSequence.Listener() {
             @Override
             public void onSequenceFinish() {

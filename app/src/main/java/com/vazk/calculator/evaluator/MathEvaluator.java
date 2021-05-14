@@ -302,7 +302,7 @@ public class MathEvaluator extends LogicEvaluator {
             return context.getString(R.string.not_find_root);
 
         } else if (!roots.isListOfLists()) {
-            return context.getString(R.string.no_root);
+   return context.getString(R.string.no_root);
         }
 
         return LaTexFactory.toLaTeX(roots);
@@ -423,7 +423,7 @@ public class MathEvaluator extends LogicEvaluator {
             if (result.toString().toLowerCase().contains("solve")) {
                 return context.getString(R.string.not_find_root);
             } else if (result.toString().equalsIgnoreCase("{}")) {
-                return context.getString(R.string.no_root);
+           return context.getString(R.string.no_root);
             }
             return LaTexFactory.toLaTeX(result);
         } catch (RuntimeException rex) {

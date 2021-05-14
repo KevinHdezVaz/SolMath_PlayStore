@@ -24,7 +24,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import androidx.annotation.WorkerThread;
 
+import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +54,7 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
     public TextView texto2;
     protected SharedPreferences preferences;
     private boolean isDataNull = true;
+    Button boton,boton2,boton3,boton4;
 
     @Override
     public void onBackPressed() {
@@ -68,11 +71,39 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
         getIntentData();
         texto = findViewById(R.id.texto);
         texto2 = findViewById(R.id.texto2);
+        boton2 = findViewById(R.id.btn11);
+
+        boton3 = findViewById(R.id.btn12);
+        boton4 = findViewById(R.id.btn13);
+
+        boton2.setText("-5x - 6 = 3x - 8");
+        boton3.setText(Html.fromHtml("-X<sup>2</sup> - x - 6 = 0"));
+
+
+        boton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mInputFormula.setText("-5x-6=3x-8");
+
+            }
+        });
+
+        boton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mInputFormula.setText("-x^2-x-6=0");
+
+
+            }
+        });
 
 
         texto.setText("Esta calculadora de ecuaciones permite resolver una ecuación online en forma exacta con los pasos del cálculo: ecuación de primer grado, ecuación de segundo grado, ecuación de producto cero, ecuación logarítmica, ecuación diferencial.");
-        texto2.setText("Ejemplo: \n\n-5x-6=3x-8\n-x^2-x-6=0\n-x^4-5x^2+4=0");
+        texto2.setText("EjemploS: ");
+            Html.fromHtml("x<sup>2</sup>");
 
+        // \n\n-5x-6=3x-8\n-x^2-x-6=0\n-x^4-5x^2+4=0"
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isStarted = preferences.getBoolean(STARTED, false);
 
@@ -82,6 +113,9 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
         }
 
 
+        mInputFormula.setTextColor(getResources().getColor(R.color.black));
+
+        mInputFormula.setEnabled(false);
 
         if(isFirstTime()){
             clickHelp();
@@ -102,6 +136,16 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark).targetRadius(70);
 
+        TapTarget target1 = TapTarget.forView(botonpasos,
+                "Mostrar Pasos",
+                "Despues de escribir la ecuación puedes ver los pasos de la misma." )
+                .drawShadow(true)
+                .cancelable(true)
+                .targetCircleColor(R.color.colorAccent)
+                .transparentTarget(true)
+                .outerCircleColor(R.color.colorPrimary)
+                .dimColor(R.color.colorPrimaryDark).targetRadius(70);
+
         TapTarget target = TapTarget.forView(mBtnEvaluate,
                 getString(R.string.solve_equation),
                 getString(R.string.push_solve_button))
@@ -112,8 +156,11 @@ public class SolveEquationActivity extends BaseEvaluatorActivity
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark).targetRadius(70);
 
+
+
+
         TapTargetSequence sequence = new TapTargetSequence(SolveEquationActivity.this);
-        sequence.targets(target0, target);
+        sequence.targets(target0, target1,target);
         sequence.listener(new TapTargetSequence.Listener() {
             @Override
             public void onSequenceFinish() {

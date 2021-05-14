@@ -190,7 +190,7 @@
     <string name="summary_instant_res">Calcula automáticamente los resultados</string>
     <string name="instant_res">Respuestas instantáneas</string>
     <string name="not_find_root">No se puede encontrar la raíz de la ecuación.</string>
-    <string name="no_root">Esta ecuación no tiene solución.</string>
+    <string name="no_root"></string>
     <string name="change_lang_msg">Por favor, reinicie la aplicación para aplicar el idioma seleccionado.</string>
     <string name="latex_engine">Motor LaTeX</string>
 

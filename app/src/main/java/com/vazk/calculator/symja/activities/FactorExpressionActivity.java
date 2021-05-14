@@ -75,6 +75,11 @@ public class FactorExpressionActivity extends BaseEvaluatorActivity {
         if (isFirstTime()){
             clickHelp();
         }
+
+
+        mInputFormula.setTextColor(getResources().getColor(R.color.black));
+
+        mInputFormula.setEnabled(false);
     }
 
     @Override
@@ -101,9 +106,17 @@ public class FactorExpressionActivity extends BaseEvaluatorActivity {
                 .transparentTarget(true)
                 .outerCircleColor(R.color.colorPrimary)
                 .dimColor(R.color.colorPrimaryDark).targetRadius(70);
-
+        TapTarget target1 = TapTarget.forView(botonpasos,
+                "Mostrar Pasos",
+                "Despues de escribir la ecuación puedes ver los pasos de la misma." )
+                .drawShadow(true)
+                .cancelable(true)
+                .targetCircleColor(R.color.colorAccent)
+                .transparentTarget(true)
+                .outerCircleColor(R.color.colorPrimary)
+                .dimColor(R.color.colorPrimaryDark).targetRadius(70);
         TapTargetSequence sequence = new TapTargetSequence(FactorExpressionActivity.this);
-        sequence.targets(target0, target);
+        sequence.targets(target0, target1,target);
         sequence.listener(new TapTargetSequence.Listener() {
             @Override
             public void onSequenceFinish() {
