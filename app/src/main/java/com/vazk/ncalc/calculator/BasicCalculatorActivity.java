@@ -35,7 +35,6 @@ import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.SwitchCompat;
 
-import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -51,7 +50,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.AbstractCalculatorActivity;
+import com.vazk.calculator.activities.base.AbstractooCalculatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.base.Evaluator;
@@ -79,7 +78,7 @@ import java.util.ArrayList;
 import io.github.kexanie.library.MathView;
 
 
-public class BasicCalculatorActivity extends AbstractCalculatorActivity
+public class BasicCalculatorActivity extends AbstractooCalculatorActivity
         implements LogicEvaluator.EvaluateCallback, KeyboardListener, View.OnClickListener {
     public static final String TAG = BasicCalculatorActivity.class.getSimpleName();
     public static final String DATA = "DATA_BUNDLE";

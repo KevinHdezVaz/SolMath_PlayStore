@@ -29,7 +29,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -49,7 +49,7 @@ import static com.vazk.calculator.R.string.derivative;
  * Đạo hàm cấp n
  * Created by Duy on 19/7/2016
  */
-public class DerivativeActivity extends BaseEvaluatorActivity {
+public class DerivativeActivity extends BasseEvaluatorActivity {
     private static final String STARTED
             = DerivativeActivity.class.getName() + "started";
     private boolean isDataNull = true;

@@ -27,13 +27,12 @@ import androidx.annotation.WorkerThread;
 
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
 import com.vazk.calculator.symja.models.SimplifyItem;
 import com.vazk.ncalc.calculator.BasicCalculatorActivity;
-import com.vazk.ncalc.utils.DLog;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetSequence;
 
@@ -42,7 +41,7 @@ import java.util.ArrayList;
 /**
  * Created by Duy on 19/7/2016
  */
-public class SimplifyExpressionActivity extends BaseEvaluatorActivity {
+public class SimplifyExpressionActivity extends BasseEvaluatorActivity {
     private static final String STARTED = SimplifyExpressionActivity.class.getName() + "started";
     SharedPreferences preferences;
     private boolean isDataNull = true;

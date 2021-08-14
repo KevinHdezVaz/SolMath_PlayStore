@@ -25,7 +25,7 @@ import androidx.annotation.WorkerThread;
 import android.view.View;
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.exceptions.ExpressionChecker;
@@ -43,7 +43,7 @@ import java.util.ArrayList;
  * Integrate of function f(x) with variable x, with lower limit a, upper limit b
  * Created by Duy on 07-Dec-16.
  */
-public class IntegrateActivity extends BaseEvaluatorActivity {
+public class IntegrateActivity extends BasseEvaluatorActivity {
     private static final String STARTED = IntegrateActivity.class.getName() + "started";
     private boolean isDataNull = true;
 

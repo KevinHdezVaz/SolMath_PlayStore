@@ -42,7 +42,7 @@ import android.widget.TextView;
 
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.AbstractCalculatorActivity;
+import com.vazk.calculator.activities.base.AbstractooCalculatorActivity;
 import com.vazk.ncalc.settings.CalculatorSetting;
 import com.vazk.calculator.evaluator.base.LogicEvaluator;
 import com.vazk.calculator.evaluator.MathEvaluator;
@@ -57,7 +57,7 @@ import com.vazk.ncalc.view.RevealView;
 /**
  * Created by Duy on 3/7/2016
  */
-public class LogicCalculatorActivity extends AbstractCalculatorActivity
+public class LogicCalculatorActivity extends AbstractooCalculatorActivity
         implements LogicEvaluator.EvaluateCallback, View.OnClickListener {
     private static final String TAG = LogicCalculatorActivity.class.getName();
 
@@ -245,10 +245,7 @@ public class LogicCalculatorActivity extends AbstractCalculatorActivity
         mInputDisplay.insert(s);
     }
 
-    @Override
-    public String getTextClean() {
-        return null;
-    }
+
 
     @Override
     public void onResult(final String result) {

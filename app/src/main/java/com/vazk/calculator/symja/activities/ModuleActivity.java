@@ -26,7 +26,7 @@ import android.text.InputType;
 import android.view.View;
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
  * Created by Duy on 06-Jan-17.
  */
 
-public class ModuleActivity extends BaseEvaluatorActivity {
+public class ModuleActivity extends BasseEvaluatorActivity {
     public static final String TYPE_NUMBER = "TYPE_NUMBER";
     public static final int TYPE_PERMUTATION = 0;
     public static final int TYPE_COMBINATION = 1;

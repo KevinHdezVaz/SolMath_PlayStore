@@ -4,9 +4,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 
-public class MarkdownListDocumentActivity extends BaseActivity {
+public class MarkdownListDocumentActivity extends BasseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -28,10 +28,9 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -47,7 +46,7 @@ import java.util.ArrayList;
 import static com.vazk.calculator.R.string.solve;
 
 
-public class SolveEquationActivity extends BaseEvaluatorActivity
+public class SolveEquationActivity extends BasseEvaluatorActivity
         implements View.OnClickListener {
     private static final String STARTED = SolveEquationActivity.class.getName() + "started";
     public TextView texto;

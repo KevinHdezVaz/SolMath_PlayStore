@@ -22,20 +22,16 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import android.text.InputType;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
 import com.vazk.ncalc.calculator.BasicCalculatorActivity;
@@ -50,7 +46,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  * Created by Duy on 06-Jan-17.
  */
 
-public class FactorPrimeActivity extends BaseEvaluatorActivity {
+public class FactorPrimeActivity extends BasseEvaluatorActivity {
     private static final String STARTED = FactorPrimeActivity.class.getName() + "started";
     private boolean isDataNull = true;
     Dialog epicDialog,epicDialog2;

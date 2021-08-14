@@ -39,15 +39,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mrntlu.toastie.Toastie;
- import com.vazk.calculator.R;
+import com.vazk.calculator.R;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.exceptions.ExpressionChecker;
 import com.vazk.calculator.evaluator.exceptions.ParsingException;
@@ -68,14 +66,10 @@ import org.matheclipse.parser.client.math.MathException;
 import java.util.ArrayList;
 
 
-/**
- * Abstract for eval equation, trig to exp,...
- * <p>
- * Created by Duy on 19/7/2016
- */
-public abstract class BaseEvaluatorActivity extends NavDrawerActivity
+ 
+public abstract class BasseEvaluatorActivity extends NavDrawerActivity
         implements View.OnClickListener, FunctionSuggestionAdapter.OnSuggestionClickListener {
-    protected String TAG = BaseEvaluatorActivity.class.getName();
+    protected String TAG = BasseEvaluatorActivity.class.getName();
     MediaPlayer mediaPlayer;
 
     public LinearLayout linearLayout;
@@ -188,7 +182,7 @@ public CardView cardView;
 
 
             Toast.makeText(this, "Ecuación copiada al portapapeles", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(BaseEvaluatorActivity.this, prueba.class));
+            startActivity(new Intent(BasseEvaluatorActivity.this, prueba.class));
 
         });
         boton.setOnLongClickListener(view -> {

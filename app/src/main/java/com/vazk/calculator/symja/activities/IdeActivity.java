@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -14,7 +14,7 @@ import com.gx.common.collect.Lists;
 
 import java.util.ArrayList;
 
-public class IdeActivity extends BaseEvaluatorActivity {
+public class IdeActivity extends BasseEvaluatorActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

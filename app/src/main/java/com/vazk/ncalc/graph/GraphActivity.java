@@ -28,7 +28,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetSequence;
 
@@ -40,7 +40,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
 
-public class GraphActivity extends BaseActivity {
+public class GraphActivity extends BasseActivity {
     public static final String DATA = GraphActivity.class.getName();
     public static final String FUNC = GraphActivity.class.getName();
     public static final String TAG = "GraphActivity";

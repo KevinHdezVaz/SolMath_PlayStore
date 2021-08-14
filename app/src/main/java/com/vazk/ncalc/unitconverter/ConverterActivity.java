@@ -32,7 +32,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 import com.vazk.ncalc.unitconverter.adapters.ItemUnitConverter;
 import com.vazk.ncalc.unitconverter.adapters.UnitAdapter;
 import com.vazk.ncalc.unitconverter.utils.AreaStrategy;
@@ -49,7 +49,7 @@ import com.vazk.ncalc.unitconverter.utils.WeightStrategy;
 
 import java.util.ArrayList;
 
-public class ConverterActivity extends BaseActivity {
+public class ConverterActivity extends BasseActivity {
 
     String TAG = ConverterActivity.class.getName();
     RecyclerView mRecycleView;

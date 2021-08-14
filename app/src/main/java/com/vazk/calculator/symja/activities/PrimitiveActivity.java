@@ -25,7 +25,7 @@ import androidx.annotation.WorkerThread;
 import android.view.View;
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -43,7 +43,7 @@ import java.util.ArrayList;
  * Created by Duy on 07-Dec-16.
  */
 
-public class PrimitiveActivity extends BaseEvaluatorActivity {
+public class PrimitiveActivity extends BasseEvaluatorActivity {
     private static final String STARTED = PrimitiveActivity.class.getName() + "started";
     private boolean isDataNull = true;
 

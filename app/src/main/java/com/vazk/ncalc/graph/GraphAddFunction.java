@@ -28,11 +28,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 import com.vazk.calculator.R;
 
 
-public class GraphAddFunction extends BaseActivity {
+public class GraphAddFunction extends BasseActivity {
     private Button btnSave;
     private EditText[] editFunctions;
     private SharedPreferences preferences;

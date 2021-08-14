@@ -20,7 +20,6 @@ package com.vazk.calculator.symja.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -28,13 +27,11 @@ import androidx.annotation.WorkerThread;
 
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
 import com.vazk.calculator.symja.models.NumberIntegerItem;
-import com.vazk.ncalc.document.MarkdownDocumentActivity;
-import com.vazk.ncalc.document.model.FunctionDocumentItem;
 import com.gx.common.collect.Lists;
 
 import java.util.ArrayList;
@@ -46,7 +43,7 @@ import static com.vazk.calculator.symja.activities.NumberActivity.NumberType.CAT
  * Created by Duy on 15-Feb-17.
  */
 
-public class NumberActivity extends BaseEvaluatorActivity {
+public class NumberActivity extends BasseEvaluatorActivity {
     public static final String DATA = "DATA";
     private int type;
 

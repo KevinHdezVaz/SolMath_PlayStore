@@ -30,7 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import com.vazk.calculator.R;
 
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -45,7 +45,7 @@ import java.util.ArrayList;
 /**
  * Created by Duy on 19/7/2016
  */
-public class ExpandAllExpressionActivity extends BaseEvaluatorActivity {
+public class ExpandAllExpressionActivity extends BasseEvaluatorActivity {
     private static final String STARTED = ExpandAllExpressionActivity.class.getName() + "started";
     SharedPreferences preferences;
     private boolean isDataNull = true;

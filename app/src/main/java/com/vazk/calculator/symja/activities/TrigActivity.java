@@ -25,7 +25,7 @@ import androidx.annotation.WorkerThread;
 import android.widget.Toast;
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -43,7 +43,7 @@ import static com.vazk.calculator.symja.models.TrigItem.TRIG_TYPE.REDUCE;
  * Created by Duy on 31-Jan-17.
  */
 
-public class TrigActivity extends BaseEvaluatorActivity {
+public class TrigActivity extends BasseEvaluatorActivity {
     public static final String TYPE = "TrigActivity";
     public static final String TAG = "TrigActivity";
     private int mType;

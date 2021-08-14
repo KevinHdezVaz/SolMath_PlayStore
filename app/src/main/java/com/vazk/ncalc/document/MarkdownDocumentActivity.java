@@ -6,10 +6,10 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 import com.vazk.ncalc.document.model.FunctionDocumentItem;
 
-public class MarkdownDocumentActivity extends BaseActivity {
+public class MarkdownDocumentActivity extends BasseActivity {
 
     public static final String EXTRA_ASSET_PATH = "MarkdownDocumentActivity.EXTRA_ASSET_PATH";
     public static final String EXTRA_DOCUMENT_NAME = "MarkdownDocumentActivity.EXTRA_DOCUMENT_NAME";

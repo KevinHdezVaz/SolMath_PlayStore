@@ -30,7 +30,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.activities.base.BasseActivity;
 import com.vazk.calculator.R;
 import com.vazk.calculator.symja.tokenizer.ExpressionTokenizer;
 import com.vazk.ncalc.calculator.BasicCalculatorActivity;
@@ -42,7 +42,7 @@ import java.util.ArrayList;
  * Created by Duy on 29-Nov-16.
  */
 
-public class HistoryActivity extends BaseActivity implements HistoryAdapter.HistoryListener {
+public class HistoryActivity extends BasseActivity implements HistoryAdapter.HistoryListener {
     private RecyclerView mRecyclerView;
     private FloatingActionButton btnClear;
     private HistoryAdapter mHistoryAdapter;

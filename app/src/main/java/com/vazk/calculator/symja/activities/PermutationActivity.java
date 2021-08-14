@@ -20,8 +20,6 @@ package com.vazk.calculator.symja.activities;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
@@ -34,7 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.Constants;
 import com.vazk.calculator.evaluator.EvaluateConfig;
 import com.vazk.calculator.evaluator.MathEvaluator;
@@ -52,7 +50,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 
 
 
-public class PermutationActivity extends BaseEvaluatorActivity {
+public class PermutationActivity extends BasseEvaluatorActivity {
     public static final String TYPE_NUMBER = "TYPE_NUMBER";
     public static final int TYPE_PERMUTATION = 0;
     Dialog  epicDialog2;

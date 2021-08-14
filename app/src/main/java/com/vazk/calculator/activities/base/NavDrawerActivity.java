@@ -21,10 +21,6 @@ package com.vazk.calculator.activities.base;
 import android.content.Intent;
 import android.os.Handler;
 import androidx.annotation.NonNull;
-import com.google.android.material.navigation.NavigationView;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -64,7 +60,7 @@ import static com.vazk.calculator.symja.models.TrigItem.TRIG_TYPE.REDUCE;
 /**
  * Created by Duy on 19/7/2016
  */
-public abstract class NavDrawerActivity extends BaseActivity    {
+public abstract class NavDrawerActivity extends BasseActivity {
     protected final Handler handler = new Handler();
 
 

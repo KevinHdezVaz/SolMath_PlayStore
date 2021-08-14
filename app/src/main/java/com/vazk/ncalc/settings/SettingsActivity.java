@@ -24,14 +24,14 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 
 
-import com.vazk.calculator.R;import com.vazk.calculator.activities.base.BaseActivity;
+import com.vazk.calculator.R;import com.vazk.calculator.activities.base.BasseActivity;
 
 /**
  * Setting for calcualtor
  * <p>
  * Include precision of calculate. Font, theme, style. Dev mode, trace mode.
  */
-public class SettingsActivity extends BaseActivity {
+public class SettingsActivity extends BasseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

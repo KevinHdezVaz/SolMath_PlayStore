@@ -25,7 +25,7 @@ import androidx.annotation.WorkerThread;
 import android.text.InputType;
 
 import com.vazk.calculator.R;
-import com.vazk.calculator.activities.base.BaseEvaluatorActivity;
+import com.vazk.calculator.activities.base.BasseEvaluatorActivity;
 import com.vazk.calculator.evaluator.LaTexFactory;
 import com.vazk.calculator.evaluator.MathEvaluator;
 import com.vazk.calculator.evaluator.thread.Command;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
  * Created by Duy on 06-Jan-17.
  */
 
-public class PiActivity extends BaseEvaluatorActivity {
+public class PiActivity extends BasseEvaluatorActivity {
     private static final String STARTED = PiActivity.class.getName() + "started";
     private boolean isDataNull = true;
     private String precision = "";
