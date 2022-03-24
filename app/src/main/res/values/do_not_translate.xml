@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
  <resources>
+
+    <string name="codigoAd">ca-app-pub-5486388630970825/6784003493</string>
+    <string name="save_setting_button">Save</string>
+    <string name="q1">El planeta más grande del sistema solar es Júpiter.
+</string>
+    <string name="q2">Los primeros Juegos Olímpicos se celebraron en Atenas, Grecia.
+</string>
+    <string name="q3">El violín tiene 6 cuerdas.
+</string>
+    <string name="q4">Los murciélagos voladores pertenecen a las aves
+</string>
+    <string name="q5">El sonido se propaga más rápido en el agua que en el aire.
+</string>
+    <string name="wrong_answer">Incorrecto
+</string>
+    <string name="correct_answer">Correcto</string>
+
     <string name="app_name" translatable="false">SoluMath</string>
     <string name="A" translatable="false">a</string>
     <string name="B" translatable="false">b</string>

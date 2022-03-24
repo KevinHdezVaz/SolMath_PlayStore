@@ -12,16 +12,6 @@
         </menu>
     </item>
 
-    <item android:title="Calificar app">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_calificar"
-                    android:icon="@drawable/ic_star_rate_black_18dp"
-                    android:title="Calificar" />
-            </group>
-        </menu>
-    </item>
 
     <item android:title="Compartir App">
         <menu>
@@ -37,27 +27,17 @@
 
 
 
-    <item android:title="Apps del desarrollador">
+    <item android:title="Combina esta app con:">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_star_rate_black_18dp"
 
-                    android:title="Mathquizz - Aprende mientras juegas" />
+                    android:title="FormuTodo - Fórmulas y Tarea Fácil" />
             </group>
         </menu>
     </item>
-    <item android:title="Encuesta">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/encuesta"
-                    android:icon="@drawable/ic_baseline_sticky_note_2_24"
-                    android:title="Ayudanos a mejorar la app con tus opiniones."
 
-                    />
-            </group>
-        </menu>
-    </item>
 
 </menu>

@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.vazk.calculator">
+    package="com.solumath.calculator">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
+
+     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name="com.vazk.ncalc.CalcApplication"
+        android:name="com.solumath.ncalc.CalcApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppThemeLight"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".menus.splashscreen">
+        <activity android:name="com.solumath.calculator.SettingActivity"></activity>
+        <activity android:name="com.solumath.calculator.Encuesta" />
+
+        <activity android:name="com.solumath.calculator.menus.prueba" />
+        <activity android:name="com.solumath.calculator.menus.MenuNumeros" />
+        <activity android:name="com.solumath.calculator.menus.MenuEstadistica" />
+        <activity android:name="com.solumath.calculator.menus.menuCalculo" />
+        <activity android:name="com.solumath.calculator.menus.MenuAlgebra" />
+        <activity android:name="com.solumath.calculator.PrincipalMenu">
 
 
-
-
-        </activity>
-        <activity android:name=".menus.prueba" />
-        <activity android:name=".menus.MenuNumeros" />
-        <activity android:name=".menus.MenuEstadistica" />
-        <activity android:name=".menus.menuCalculo" />
-        <activity android:name=".menus.MenuAlgebra" />
-        <activity android:name=".PrincipalMenu">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,112 +43,108 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.vazk.ncalc.calculator.BasicCalculatorActivity"
+            android:name="com.solumath.ncalc.calculator.BasicCalculatorActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.vazk.ncalc.unitconverter.UnitCategoryActivity"
+            android:name="com.solumath.ncalc.unitconverter.UnitCategoryActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:label="@string/title_activity_unit_converter_acitvity"
             android:launchMode="singleTask" />
-        <activity android:name="com.vazk.ncalc.unitconverter.ConverterActivity" />
+        <activity android:name="com.solumath.ncalc.unitconverter.ConverterActivity" />
         <activity
-            android:name="com.vazk.ncalc.settings.SettingsActivity"
+            android:name="com.solumath.ncalc.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.vazk.ncalc.geom2d.GeometryDescartesActivity"
+            android:name="com.solumath.ncalc.geom2d.GeometryDescartesActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:label="@string/title_activity_geometry"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.vazk.ncalc.calculator.LogicCalculatorActivity"
+            android:name="com.solumath.ncalc.calculator.LogicCalculatorActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.vazk.ncalc.matrix.MatrixCalculatorActivity"
+            android:name="com.solumath.ncalc.matrix.MatrixCalculatorActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:label="@string/title_activity_matrix_calculator"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".symja.activities.SolveEquationActivity"
+            android:name="com.solumath.calculator.symja.activities.SolveEquationActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.SimplifyExpressionActivity"
+            android:name="com.solumath.calculator.symja.activities.SimplifyExpressionActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.FactorExpressionActivity"
+            android:name="com.solumath.calculator.symja.activities.FactorExpressionActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.DerivativeActivity"
+            android:name="com.solumath.calculator.symja.activities.DerivativeActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.ExpandAllExpressionActivity"
+            android:name="com.solumath.calculator.symja.activities.ExpandAllExpressionActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.vazk.ncalc.graph.GraphActivity"
+            android:name="com.solumath.ncalc.graph.GraphActivity"
             android:label="@string/title_activity_graph" />
         <activity
-            android:name="com.vazk.ncalc.graph.GraphAddFunction"
+            android:name="com.solumath.ncalc.graph.GraphAddFunction"
             android:label="@string/add_function"
             android:launchMode="singleTask" />
         <activity
-            android:name=".history.HistoryActivity"
+            android:name="com.solumath.calculator.history.HistoryActivity"
             android:label="@string/history"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.vazk.ncalc.systemequations.SystemEquationActivity"
+            android:name="com.solumath.ncalc.systemequations.SystemEquationActivity"
             android:label="@string/solve_system_equation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.LimitActivity"
+            android:name="com.solumath.calculator.symja.activities.LimitActivity"
             android:label="@string/limit"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.IntegrateActivity"
+            android:name="com.solumath.calculator.symja.activities.IntegrateActivity"
             android:label="@string/integrate"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.PrimitiveActivity"
+            android:name="com.solumath.calculator.symja.activities.PrimitiveActivity"
             android:label="@string/primitive"
             android:launchMode="singleTask" />
-        <activity android:name="com.vazk.ncalc.document.info.InfoActivity" />
+        <activity android:name="com.solumath.ncalc.document.info.InfoActivity" />
         <activity
-            android:name=".symja.activities.FactorPrimeActivity"
+            android:name="com.solumath.calculator.symja.activities.FactorPrimeActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.PermutationActivity"
+            android:name="com.solumath.calculator.symja.activities.PermutationActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.ModuleActivity"
+            android:name="com.solumath.calculator.symja.activities.ModuleActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".symja.activities.TrigActivity"
+            android:name="com.solumath.calculator.symja.activities.TrigActivity"
             android:launchMode="singleTask" />
 
-        <service
-            android:name=".Notificaciones"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5486388630970825~8380990343"/>
 
         <activity
-            android:name=".symja.activities.NumberActivity"
+            android:name="com.solumath.calculator.symja.activities.NumberActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".symja.activities.PiActivity" />
-        <activity android:name="com.vazk.ncalc.document.MarkdownDocumentActivity" />
+        <activity android:name="com.solumath.calculator.symja.activities.PiActivity" />
+        <activity android:name="com.solumath.ncalc.document.MarkdownDocumentActivity" />
         <activity
-            android:name=".symja.activities.IdeActivity"
+            android:name="com.solumath.calculator.symja.activities.IdeActivity"
             android:label="@string/ide_mode" />
-        <activity android:name="com.vazk.ncalc.document.MarkdownListDocumentActivity" />
+        <activity android:name="com.solumath.ncalc.document.MarkdownListDocumentActivity" />
     </application>
 
 </manifest>

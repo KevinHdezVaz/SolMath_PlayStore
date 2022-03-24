@@ -15,8 +15,7 @@
         <item>Russia</item>
         <item>French</item>
         <item>Tiếng Việt</item>
-        <item>Chinese (Simplified)</item>
-    </string-array>
+     </string-array>
 
     <string-array name="language_code" translatable="false">
         <item>default_lang</item>
@@ -25,8 +24,7 @@
         <item>fr</item>
         <item>ru</item>
         <item>vi</item>
-        <item>zh_rCN</item>
-    </string-array>
+     </string-array>
 
     <string name="key_pref_precision" translatable="false">key_pref_precision</string>
     <string name="key_pref_trace_mode" translatable="false">key_pref_trace_mode</string>

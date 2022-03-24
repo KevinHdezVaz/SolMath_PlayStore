@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MathQuizz"
+        android:text="SoluMath"
         android:layout_marginTop="10dp"
         android:textSize="19sp"
         android:layout_marginLeft="10dp"
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Adfasdfasdf"
+        android:text="Tu Solución para la educación."
         android:textStyle="bold"
         android:textSize="14sp"
         app:fontFamily="@font/quicksand_medium" />

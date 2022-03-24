@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quickMathBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/wave_header"
+        ></com.scwang.wave.MultiWaveHeader>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:id="@+id/cardds"
+        android:layout_centerInParent="true"
+        android:layout_height="600dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            >
+
+
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView22"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+
+                app:lottie_rawRes="@raw/developer"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/linea"
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@id/arriba"
+                android:layout_alignParentStart="true"
+
+                android:alpha=".5"
+                android:layout_marginTop="250dp"
+
+                android:background="@android:color/holo_blue_dark">
+
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+
+
+
+
+                <TextView
+                 android:text="Tus sugerencias son importantes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/quicksand_regular"
+android:id="@+id/texto"
+                    android:gravity="center"
+
+                    ></TextView>
+
+
+                <EditText
+                    android:layout_below="@+id/texto"
+                    android:id="@+id/edit_favorite_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="8dp"
+                     android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/quicksand_regular"
+
+                    android:gravity="center"
+                    android:hint="Deja tus sugerencias por aqui!"
+
+              ></EditText>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="90dp"
+    android:id="@+id/save_setting_button"
+
+    android:layout_marginRight="90dp"
+    android:layout_below="@+id/edit_favorite_sport"
+    android:gravity="center"
+    android:text="GRACIAS"
+    ></Button>
+
+
+
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

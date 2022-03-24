@@ -111,3 +111,19 @@
   public *;
 }
 
+-ignorewarnings
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.huawei.hianalytics.**{*;}
+-keep class com.huawei.updatesdk.**{*;}
+-keep class com.huawei.hms.**{*;}
+-keep class com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.** { *; }
+-keep class com.huawei.hianalytics.**{*;}
+
+
+# Exclude dynamic-loader-fallback from obfuscation.
+-keep class com.huawei.hms.feature.dynamic.descriptors.huawei_module_videoplayer.AssetModuleDescriptor{*;}

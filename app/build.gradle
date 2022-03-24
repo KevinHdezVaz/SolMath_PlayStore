@@ -5,31 +5,32 @@ apply plugin: 'com.android.application'
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.vazk.calculator"
+        applicationId "com.solumath.calculator"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1"
+        versionCode 2
+        versionName "1.0.01"
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
+
+        resConfigs "en", "de", "es","fr","pl","ru","vi"
     }
 
+
+
+     
     buildTypes {
         release {
             minifyEnabled true
-            debuggable false
+             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
             minifyEnabled false
-            debuggable true
+             debuggable true
         }
     }
-//
-//    testOptions {
-//        unitTests.returnDefaultValues = true
-//    }
 
     lintOptions {
         abortOnError false
@@ -39,7 +40,10 @@ apply plugin: 'com.android.application'
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-}
+     buildFeatures {
+         viewBinding true
+     }
+ }
 
 repositories {
     mavenCentral()
@@ -50,7 +54,8 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.json:json:20140107'
@@ -67,8 +72,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
 
-    implementation platform('com.google.firebase:firebase-bom:27.1.0')
-    implementation 'com.google.firebase:firebase-analytics'
 
     androidTestImplementation 'androidx.test:rules:1.1.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -106,11 +109,16 @@ dependencies {
     implementation 'com.commit451:PhotoView:1.2.4'
     implementation 'com.github.MrNtlu:Toastie:1.1.0'
 
-    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.3'
+
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
     implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.18'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.3'
+    implementation 'com.google.android.gms:play-services-ads:20.3.0'
+
+
+
 
 
 }
-apply plugin: 'com.google.gms.google-services'
+
+

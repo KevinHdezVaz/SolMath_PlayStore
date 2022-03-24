@@ -19,7 +19,7 @@
             android:orientation="vertical"
             android:weightSum="1">
 
-            <com.vazk.ncalc.view.CalculatorEditText
+            <com.solumath.ncalc.view.CalculatorEditText
                 android:id="@+id/txtDisplay"
                 style="@style/AppTheme.EditText.Formula"
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@ android:hint="SoluMath"
                 android:textSize="40sp" />
 
 
-            <com.vazk.ncalc.view.CalculatorEditText
+            <com.solumath.ncalc.view.CalculatorEditText
                 android:id="@+id/txtResult"
                 style="@style/AppTheme.EditText.Result"
                 android:layout_width="match_parent"

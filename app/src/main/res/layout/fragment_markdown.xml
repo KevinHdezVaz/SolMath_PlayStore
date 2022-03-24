@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <com.vazk.ncalc.document.view.MarkdownDocumentView
+    <com.solumath.ncalc.document.view.MarkdownDocumentView
         android:id="@+id/markdown_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    </com.vazk.ncalc.document.view.MarkdownDocumentView>
+    </com.solumath.ncalc.document.view.MarkdownDocumentView>
 </FrameLayout>

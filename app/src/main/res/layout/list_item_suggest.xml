@@ -47,7 +47,7 @@
 
         </LinearLayout>
 
-        <com.vazk.ncalc.view.CalcImageButton
+        <com.solumath.ncalc.view.CalcImageButton
             android:id="@+id/img_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

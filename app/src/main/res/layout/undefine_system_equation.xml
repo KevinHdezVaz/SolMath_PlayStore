@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.vazk.ncalc.view.BaseEditText
+                <com.solumath.ncalc.view.BaseEditText
                     android:id="@+id/edit_params"
                     android:layout_width="match_parent"
                     android:enabled="false"
@@ -84,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:visibility="gone" />
 
-                    <com.vazk.ncalc.view.MathFormulaView
+                    <com.solumath.ncalc.view.MathFormulaView
                         android:id="@+id/math_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
 
                         app:text="SoluMath">
 
-                    </com.vazk.ncalc.view.MathFormulaView>
+                    </com.solumath.ncalc.view.MathFormulaView>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 

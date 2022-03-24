@@ -24,7 +24,7 @@
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arcsin"
  android:background="@drawable/fondo_claro"
 
@@ -33,7 +33,7 @@
             style="?buttonAdvanceStyle"
             android:text="@string/arcsin" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arccos"
 
              android:background="@drawable/fondo_claro"
@@ -41,7 +41,7 @@
             style="?buttonAdvanceStyle"
             android:text="@string/arccos" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arctan"
              android:background="@drawable/fondo_claro"
 
@@ -54,7 +54,7 @@
         style="?buttonAdvanceStyle"-->
         <!--android:layout_weight="1"-->
         <!--android:text="@string/table"/>-->
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_log"
              android:background="@drawable/fondo_claro"
 
@@ -73,21 +73,21 @@
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_sinh"
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:text="@string/sinh" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_cosh"
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:text="@string/cosh" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_tanh"
              android:background="@drawable/fondo_claro"
 
@@ -100,7 +100,7 @@
         style="?buttonAdvanceStyle"-->
         <!--android:layout_weight="1"-->
         <!--android:text="@string/table"/>-->
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_exp"
              android:background="@drawable/fondo_claro"
 
@@ -119,7 +119,7 @@
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arcsinh"
              android:background="@drawable/fondo_claro"
 
@@ -129,7 +129,7 @@
             android:layout_weight="1"
             android:text="@string/arcsinh" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arccosh"
              android:background="@drawable/fondo_claro"
 
@@ -139,7 +139,7 @@
             android:layout_weight="1"
             android:text="@string/arccosh" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_arctanh"
              android:background="@drawable/fondo_claro"
 
@@ -149,7 +149,7 @@
             android:layout_weight="1"
             android:text="@string/arctanh" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_mod"
              android:background="@drawable/fondo_claro"
 
@@ -165,35 +165,35 @@
         android:orientation="horizontal"
         android:weightSum="5">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_ln"
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:text="@string/ln" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_abs"
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:text="@string/abs" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:id="@+id/btn_var_e"
             android:text="@string/constant_e" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_percent"
              android:background="@drawable/fondo_claro"
 
             style="?buttonAdvanceStyle"
             android:text="@string/percentage" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_sign"
              android:background="@drawable/fondo_claro"
 
@@ -212,7 +212,7 @@
         android:orientation="horizontal"
         android:weightSum="5">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_i"
              android:background="@drawable/fondo_claro"
 
@@ -222,7 +222,7 @@
             android:layout_weight="1"
             android:text="@string/i" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_gcd"
              android:background="@drawable/fondo_claro"
 
@@ -232,7 +232,7 @@
             android:layout_weight="1"
             android:text="@string/gcd" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_lcm"
              android:background="@drawable/fondo_claro"
 
@@ -242,7 +242,7 @@
             android:layout_weight="1"
             android:text="@string/lcm" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_combi"
              android:background="@drawable/fondo_claro"
 
@@ -252,7 +252,7 @@
             android:layout_weight="1"
             android:text="@string/binomial" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_perm"
              android:background="@drawable/fondo_claro"
 
@@ -273,7 +273,7 @@
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_ceil"
              android:background="@drawable/fondo_claro"
 
@@ -283,7 +283,7 @@
             android:layout_weight="1"
             android:text="@string/ceil" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_floor"
              android:background="@drawable/fondo_claro"
 
@@ -293,7 +293,7 @@
             android:layout_weight="1"
             android:text="@string/floor" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_min"
              android:background="@drawable/fondo_claro"
 
@@ -303,7 +303,7 @@
             android:layout_weight="1"
             android:text="@string/min" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_max"
              android:background="@drawable/fondo_claro"
 

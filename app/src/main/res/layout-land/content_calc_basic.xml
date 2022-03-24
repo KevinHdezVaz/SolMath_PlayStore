@@ -31,12 +31,12 @@
             android:background="#FFF"
             android:visibility="gone">
 
-            <com.vazk.ncalc.view.MathFormulaView
+            <com.solumath.ncalc.view.MathFormulaView
                 android:id="@+id/math_result"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            </com.vazk.ncalc.view.MathFormulaView>
+            </com.solumath.ncalc.view.MathFormulaView>
 
             <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/progress_bar_main"

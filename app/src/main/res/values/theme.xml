@@ -47,7 +47,7 @@
         <item name="text_pad_basic_color">@color/white</item>
         <item name="text_pad_advance_color">@color/white</item>
 
-        <item name="imageTintColor">@color/black</item>
+
     </style>
 
 

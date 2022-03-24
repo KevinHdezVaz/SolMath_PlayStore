@@ -21,34 +21,34 @@
             android:background="?colorAccent"
             android:weightSum="6">
 
-            <com.vazk.ncalc.view.CalcButton
+            <com.solumath.ncalc.view.CalcButton
                 android:id="@+id/dec"
                 style="?buttonAdvanceStyle"
                 android:onClick="onButtonClick"
                 android:text="@string/dec" />
 
-            <com.vazk.ncalc.view.CalcButton
+            <com.solumath.ncalc.view.CalcButton
 
                 android:id="@+id/hex"
                 style="?buttonAdvanceStyle"
                 android:onClick="onButtonClick"
                 android:text="@string/hex" />
 
-            <com.vazk.ncalc.view.CalcButton
+            <com.solumath.ncalc.view.CalcButton
 
                 android:id="@+id/bin"
                 style="?buttonAdvanceStyle"
                 android:onClick="onButtonClick"
                 android:text="@string/bin" />
 
-            <com.vazk.ncalc.view.CalcButton
+            <com.solumath.ncalc.view.CalcButton
 
                 android:id="@+id/oct"
                 style="?buttonAdvanceStyle"
                 android:onClick="onButtonClick"
                 android:text="@string/oct" />
 
-            <com.vazk.ncalc.view.CalcButton
+            <com.solumath.ncalc.view.CalcButton
 
                 android:id="@+id/btn_clear"
                 style="?buttonAdvanceStyle"
@@ -74,7 +74,7 @@
         android:weightSum="9">
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/op_and"
             style="?buttonAdvanceStyle"
@@ -82,7 +82,7 @@
             android:text="@string/and"
             android:visibility="visible" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/op_or"
             style="?buttonAdvanceStyle"
@@ -91,7 +91,7 @@
             android:visibility="visible" />
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/op_xor"
             style="?buttonAdvanceStyle"
@@ -100,39 +100,39 @@
             android:visibility="visible" />
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/F"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/F" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_neq"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/neq" />
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_left_paratheses"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/leftParen" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_right_parathese"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/rightParen" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_true"
             style="?buttonAdvanceStyle"
             android:onClick="onButtonClick"
             android:text="@string/mtrue" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/btn_false"
             style="?buttonAdvanceStyle"
             android:onClick="onButtonClick"
@@ -145,42 +145,42 @@
         android:layout_weight="1"
         android:weightSum="8">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/A"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="A" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/B"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="B" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/C"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="C" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/D"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/D" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/E"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/E" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_geq"
             style="?buttonDigitStyle"
@@ -188,7 +188,7 @@
             android:text="@string/geq" />
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_leq"
             style="?buttonDigitStyle"
@@ -196,7 +196,7 @@
             android:text="@string/leq" />
 
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_gt"
             style="?buttonDigitStyle"
@@ -212,49 +212,49 @@
         android:orientation="horizontal"
         android:weightSum="8">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit5"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit5" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit6"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit6" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit7"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit7" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit8"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit8" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit9"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit9" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_mul"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/mul" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_div"
             style="?buttonDigitStyle"
@@ -262,7 +262,7 @@
             android:onClick="onButtonClick"
             android:text="@string/div" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_lt"
             style="?buttonDigitStyle"
@@ -278,47 +278,47 @@
         android:layout_weight="1"
         android:weightSum="8">
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/digit0"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit0" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
             android:id="@+id/digit1"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit1" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit2"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit2" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit3"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit3" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/digit4"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/digit4" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_plus"
             style="?buttonDigitStyle"
             android:onClick="onButtonClick"
             android:text="@string/plus" />
 
-        <com.vazk.ncalc.view.CalcButton
+        <com.solumath.ncalc.view.CalcButton
 
             android:id="@+id/btn_minus"
             style="?buttonDigitStyle"
