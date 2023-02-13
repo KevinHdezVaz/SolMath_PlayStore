@@ -107,7 +107,12 @@ public class menuCalculo extends AppCompatActivity {
             }
             if(i == 3 ){
                 startActivity(new Intent(menuCalculo.this, LimitActivity.class));
-             }
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(menuCalculo.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
 
         });
 

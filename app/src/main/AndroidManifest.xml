@@ -136,6 +136,16 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5486388630970825~8380990343"/>
 
+        <service
+            android:name="com.solumath.notificacion.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+
         <activity
             android:name="com.solumath.calculator.symja.activities.NumberActivity"
             android:launchMode="singleTask" />

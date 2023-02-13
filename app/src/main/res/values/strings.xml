@@ -376,11 +376,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_video">Video</string>
+    <string name="gracias_por_descargar_nuestra_aplicaci_n_esperamos_que_encuentres_til_y_disfrutes_de_su_uso_tu_satisfacci_n_es_importante_para_nosotros_por_lo_que_agradecer_amos_mucho_si_pudieras_tomar_un_momento_para_calificar_la_aplicaci_n_en_la_tienda_de_aplicaciones_play_store">¡Gracias por descargar nuestra aplicación! Esperamos que encuentres útil y disfrutes de su uso. Tu satisfacción es importante para nosotros, por lo que agradeceríamos mucho si pudieras tomar un momento para calificar la aplicación en la tienda de aplicaciones Play Store.</string>
 
 
-
-
-
-
-    
 </resources>

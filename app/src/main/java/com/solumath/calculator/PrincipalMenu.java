@@ -183,10 +183,19 @@ public class PrincipalMenu extends AppCompatActivity implements NavigationView.O
         epicDialog = new Dialog(this);
         epicDialog.setContentView(R.layout.ayuda);
         cerrar = (ImageView) epicDialog.findViewById(R.id.cerrarVentana);
-        cerrar2 = (Button) epicDialog.findViewById(R.id.botonvamo);
+        cerrar2 = (Button) epicDialog.findViewById(R.id.btnCLick);
         estatus = (TextView)epicDialog.findViewById(R.id.estadoVar);
         cerrar.setOnClickListener(view -> epicDialog.dismiss());
-        cerrar2.setOnClickListener(view -> epicDialog.dismiss());
+
+        cerrar2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://play.google.com/store/apps/details?id=com.solumath.calculator";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
 
          epicDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         epicDialog.show();

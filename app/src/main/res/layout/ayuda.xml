@@ -59,7 +59,7 @@
                 app:lottie_autoPlay="true"
                 android:layout_gravity="center"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/wifi"
+                app:lottie_rawRes="@raw/developer"
                 ></com.airbnb.lottie.LottieAnimationView>
 
 
@@ -73,9 +73,8 @@
                 android:layout_marginLeft="5dp"
                 android:textAlignment="center"
 
-                android:text="Si deseas seguir apoyando la app, agregar nuevas mejoras y seguir aportando contenido de calidad; activa el wi-fi y mira los anuncios para apoyar al desarrollador. \n\n❤ Bsos virtuales ❤"
-
-                />    <TextView
+                android:layout_margin="20dp"
+                android:text="@string/gracias_por_descargar_nuestra_aplicaci_n_esperamos_que_encuentres_til_y_disfrutes_de_su_uso_tu_satisfacci_n_es_importante_para_nosotros_por_lo_que_agradecer_amos_mucho_si_pudieras_tomar_un_momento_para_calificar_la_aplicaci_n_en_la_tienda_de_aplicaciones_play_store"     />    <TextView
             android:textSize="16dp"
             android:layout_width="wrap_content"
             android:textColor="@android:color/black"
@@ -93,7 +92,7 @@
 
         <Button
 
-            android:id="@+id/botonvamo"
+            android:id="@+id/btnCLick"
             android:layout_width="match_parent"
             android:layout_margin="30dp"
             android:layout_height="wrap_content"
@@ -103,7 +102,7 @@
 
             android:textStyle="bold"
             android:background="@drawable/btn_redondo"
-            android:text="Salir"
+            android:text="CALIFICAR APP"
             android:textColor="@android:color/white" />
 
     </androidx.cardview.widget.CardView>

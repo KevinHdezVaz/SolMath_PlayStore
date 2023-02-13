@@ -165,7 +165,11 @@ ImageButton boton1,boton2,imagen;
                startActivity(new Intent(MenuAlgebra.this, FactorExpressionActivity.class));
 
 
-
+               if (mInterstitialAd != null) {
+                   mInterstitialAd.show(MenuAlgebra.this);
+               } else {
+                   Log.d("TAG", "The interstitial ad wasn't ready yet.");
+               }
            }
            if(i == 7){
                startActivity(new Intent(MenuAlgebra.this, UnitCategoryActivity.class));
